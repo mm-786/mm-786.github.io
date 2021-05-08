@@ -1365,7 +1365,6 @@ header .top-bar {
 }
 .intro-content .button::after {
 	display: inline-block;
-	content: "\f107";
 	font-family: fontAwesome;
 	font-size: 1.6rem;
 	line-height: inherit;
