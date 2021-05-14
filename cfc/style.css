@@ -1,0 +1,77 @@
+body{
+  background-image: url("bg1.png");
+}
+.heading{
+  text-align: center;
+  font-size: 45px;
+  font-weight: 700;
+  color: #dc3545;
+  line-height: 70px;
+}
+
+.box{
+  text-align: center;
+  background: #fff;
+  width: 35%;
+  border: solid;
+  border-color: #0dcaf0;
+  border-width: thick;
+  height: 390px;
+  color: white;
+  padding: 30px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.box>h3{
+  color:purple;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.input{
+  width:80%;
+  height: 46px;
+  border-radius: 33px;
+  background-color: #d1f3ff;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  font-weight: 300;
+  color: #2a2a2a;
+  padding: 0px 20px;
+  margin-bottom: 20px;
+}
+.fee{
+  height: 15%;
+  width: 70%;
+  font-weight: bold;
+  text-align: left;
+  color: #fe3f40;
+}
+.button{
+  margin: 10%;
+  background-color: #03a4ed;
+  font-size: 15px;
+  font-weight: 400;
+  color: #fff;
+  text-transform: capitalize;
+  padding: 12px 25px;
+  border-radius: 23px;
+  letter-spacing: 0.25px;
+  border: none;
+  outline: none;
+  transition: all .3s;
+}
+
+.button:hover {
+    background-color: #fe3f40;
+}

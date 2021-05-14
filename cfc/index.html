@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Court Fee Calc</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="heading">
+        <h1>Court Fee Calculator</h1>
+    </div>
+    <div style="display: flex; justify-content:space-around;">
+        <div class="box">
+          <h3>Securitisation Application (SA)</h3>
+          <input class="input" type="number" name="amt_sa" placeholder="Amount "><br>
+          <span><input type="radio" id="brw" name="sa_type">
+          <label style="color:#1bbce0;">Borrower</label></span>
+          <span style="margin-left:5%; margin-right:5%;"></span>
+          <span><input type="radio" id="tp" name="sa_type">
+          <label style="color:#1bbce0;">Third party</label></span><br>
+          <button type="button" class="button" name="button">Calculate</button><br>
+          <span class="fee">Fee:- ₹0.0/-</span>
+        </div>
+
+        <div class="box">
+          <h3>Original Application (OA)</h3>
+          <input class="input" type="number" name="amt_oa" placeholder="Amount "><br>
+          <span></span><br>
+          <button type="button" class="button" name="button">Calculate</button><br>
+          <span class="fee">Fee:- ₹0.0/-</span>
+        </div>
+    </div>
+  </body>
+</html>
