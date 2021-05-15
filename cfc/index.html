@@ -20,25 +20,25 @@
     <div style="display: flex; justify-content:space-around; ">
         <div class="box" v-if="sa" id="sa">
           <h3>Securitisation Application (SA)</h3>
-          <input class="input" type="number" name="amt_sa" placeholder="Amount "><br>
-          <span><input type="radio" id="brw" name="sa_type">
+          <input class="input" v-model="sAmt" type="number" name="amt_sa" placeholder="Amount "><br>
+          <span><input type="radio" id="brw" v-model="saType" value="Borrower" name="sa_type">
           <label style="color:#21ba9e;">Borrower</label></span>
           <span style="margin-left:5%; margin-right:5%;"></span>
-          <span><input type="radio" id="tp" name="sa_type">
+          <span><input type="radio" id="tp" v-model="saType" value="Third party" name="sa_type">
           <label style="color:#21ba9e;">Third party</label></span><br>
-          <button type="button" style="margin:10%;" class="button" name="button">Calculate</button><br>
+          <button type="button" @click="sCalc" style="margin:10%;" class="button" name="button">Calculate</button><br>
           <div class="fee">
-              Fee:-  ₹0.0/-
+                {{sFee}}
           </div>
         </div>
 
         <div class="box" v-if="oa" id="oa">
           <h3>Original Application (OA)</h3>
-          <input class="input" type="number" name="amt_oa" placeholder="Amount "><br>
+          <input class="input" v-model="oAmt" type="number" name="amt_oa" placeholder="Amount "><br>
           <span></span><br>
-          <button type="button" style="margin:10%;" class="button" name="button">Calculate</button><br>
+          <button type="button" @click="oCalc" style="margin:10%;" class="button" name="button">Calculate</button><br>
           <div class="fee">
-              Fee:-  ₹0.0/-
+              {{oFee}}
           </div>
         </div>
     </div>
@@ -49,7 +49,66 @@
         data: {
           sa:false,
           oa:false,
+          sAmt:'',
+          oAmt:'',
+          sFee:'Fee:-',
+          oFee:'Fee:-',
+          saType:'',
         },
+        methods: {
+      oCalc: function () {
+        if(this.oAmt >= 1000000)
+        { this.oFee=0;
+          if(this.oAmt == 1000000)
+          {
+              this.oFee=12000;
+          }
+          else if(this.oAmt > 1000000)
+          {
+            this.oFee = Math.round(12000+(((this.oAmt-1000000)/100000)*1000));
+          }
+          if(this.oFee>=150000)
+          {
+            this.oFee=150000;
+          }
+          this.oFee="Fee:- ₹"+this.oFee+"/--"
+        }
+        else{
+          this.oFee="  Invalid Amount ";
+        }
+
+      },
+    sCalc: function () {
+        if(this.saType==="Third party")
+        {
+            this.sFee = Math.round((this.sAmt/100000)*125);
+            if(this.sFee >= 50000){
+              this.sFee=50000;
+            }
+          this.sFee="Fee:- ₹"+this.sFee+"/--"
+        }
+        else if (this.saType==="Borrower")
+        {
+          if(this.sAmt>0 && this.sAmt<=1000000)
+          {
+            this.sFee=500;
+          }
+          else if (this.sAmt>1000000)
+          {
+            this.sFee = Math.round((this.sAmt/100000)*250);
+          }
+          if(this.sFee >= 100000)
+          {
+            this.sFee=100000;
+          }
+          this.sFee="Fee:- ₹"+this.sFee+"/--"
+        }
+        else
+        {
+          this.sFee="Invalid Input"
+        }
+      }
+    }
       })
     </script>
   </body>
