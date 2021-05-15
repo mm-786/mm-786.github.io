@@ -13,11 +13,11 @@
     </div>
     <div id="cfc">
     <div style="display: flex; justify-content:space-between; margin:5%;">
-      <button type="button" @click="sa=true; oa=false" style="margin-left:5%; margin-right:5%;" class="button" name="button">Securitisation Application (SA)</button>
-      <button type="button" @click="oa=true; sa=false" style="margin-left:5%; margin-right:5%;" class="button" name="button">Original Application (OA)</button>
+      <button type="button" @click="sa=true; oa=false" href="#sa" style="margin-left:5%; margin-right:5%;" class="button" name="button">Securitisation Application (SA)</button>
+      <button type="button" @click="oa=true; sa=false" href="#sa" style="margin-left:5%; margin-right:5%;" class="button" name="button">Original Application (OA)</button>
     </div>
     <div style="display: flex; justify-content:space-around; ">
-        <div class="box" v-if="sa">
+        <div class="box" v-if="sa" id="sa">
           <h3>Securitisation Application (SA)</h3>
           <input class="input" type="number" name="amt_sa" placeholder="Amount "><br>
           <span><input type="radio" id="brw" name="sa_type">
@@ -31,7 +31,7 @@
           </div>
         </div>
 
-        <div class="box" v-if="oa">
+        <div class="box" v-if="oa" id="oa">
           <h3>Original Application (OA)</h3>
           <input class="input" type="number" name="amt_oa" placeholder="Amount "><br>
           <span></span><br>
