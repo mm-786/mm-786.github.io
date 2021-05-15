@@ -20,8 +20,6 @@ body{
   justify-content: center;
   background: #fff;
   width: 80%;
-  height: 510px;
-  color: white;
   display: inline-block;
   margin-bottom: 5%;
 }
@@ -61,6 +59,7 @@ input[type=number] {
   background-color: #ccd8d6;
   font-weight: bold;
   text-align: left;
+  margin-bottom: 7%;
   color: #21ba9e;
 }
 .button{
