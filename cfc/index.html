@@ -79,6 +79,7 @@
 
       },
     sCalc: function () {
+        this.sFee='';
         if(this.saType==="Third party")
         {
             this.sFee = Math.round((this.sAmt/100000)*125);
@@ -89,9 +90,9 @@
         }
         else if (this.saType==="Borrower")
         {
-          if(this.sAmt>0 && this.sAmt<=1000000)
+          if(this.sAmt>=100000 && this.sAmt<=1000000)
           {
-            this.sFee=500;
+            this.sFee=Math.round((this.sAmt/100000)*500);
           }
           else if (this.sAmt>1000000)
           {
