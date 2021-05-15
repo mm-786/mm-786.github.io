@@ -96,7 +96,7 @@
           }
           else if (this.sAmt>1000000)
           {
-            this.sFee = Math.round((this.sAmt/100000)*250);
+            this.sFee = Math.round(5000+((this.sAmt-1000000)/100000)*250);
           }
           if(this.sFee >= 100000)
           {
