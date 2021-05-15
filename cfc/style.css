@@ -1,25 +1,37 @@
 body{
-  background-image: url("bg1.png");
+  background:#ccd8d6;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.tab-full {
+  width: 100%;
+}
+.col-six{
+	width: 50%;
 }
 .heading{
   text-align: center;
   font-size: 45px;
   font-weight: 700;
-  color: #dc3545;
+  color: #21ba9e;
   line-height: 70px;
+}
+
+@media only screen and (max-width:480px) {
+  .box{
+      width: 98%;
+  }
 }
 
 .box{
   text-align: center;
+  align-items: center;
+  justify-content: center;
   background: #fff;
-  width: 35%;
-  border: solid;
-  border-color: #0dcaf0;
-  border-width: thick;
-  height: 390px;
+  width: 49%;
+  height: 440px;
   color: white;
-  padding: 30px;
-  border-radius: 20px;
   display: inline-block;
 }
 
@@ -38,40 +50,38 @@ input[type=number] {
 }
 
 .input{
-  width:80%;
+  width:78%;
   height: 46px;
-  border-radius: 33px;
-  background-color: #d1f3ff;
+  background-color:#ccd8d6;
   border: none;
   outline: none;
   font-size: 15px;
   font-weight: 300;
   color: #2a2a2a;
-  padding: 0px 20px;
+  padding: 0px 5px;
   margin-bottom: 20px;
 }
 .fee{
   height: 15%;
-  width: 70%;
+  width: 80%;
+  padding: 5px;
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: #ccd8d6;
   font-weight: bold;
   text-align: left;
-  color: #fe3f40;
+  color: #21ba9e;
 }
 .button{
   margin: 10%;
-  background-color: #03a4ed;
+  width: 80%;
+  background-color: #21ba9e;
   font-size: 15px;
   font-weight: 400;
   color: #fff;
   text-transform: capitalize;
   padding: 12px 25px;
-  border-radius: 23px;
   letter-spacing: 0.25px;
   border: none;
   outline: none;
-  transition: all .3s;
-}
-
-.button:hover {
-    background-color: #fe3f40;
 }

@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <title>Court Fee Calc</title>
     <link rel="stylesheet" href="style.css">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
     <div class="heading">
         <h1>Court Fee Calculator</h1>
     </div>
     <div style="display: flex; justify-content:space-around;">
-        <div class="box">
+        <div class="box tab-full">
           <h3>Securitisation Application (SA)</h3>
           <input class="input" type="number" name="amt_sa" placeholder="Amount "><br>
           <span><input type="radio" id="brw" name="sa_type">
@@ -20,7 +20,9 @@
           <span><input type="radio" id="tp" name="sa_type">
           <label style="color:#1bbce0;">Third party</label></span><br>
           <button type="button" class="button" name="button">Calculate</button><br>
-          <span class="fee">Fee:- ₹0.0/-</span>
+          <div class="fee">
+              Fee:-  ₹0.0/-
+          </div>
         </div>
 
         <div class="box">
@@ -28,7 +30,9 @@
           <input class="input" type="number" name="amt_oa" placeholder="Amount "><br>
           <span></span><br>
           <button type="button" class="button" name="button">Calculate</button><br>
-          <span class="fee">Fee:- ₹0.0/-</span>
+          <div class="fee">
+              Fee:-  ₹0.0/-
+          </div>
         </div>
     </div>
   </body>
