@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Court Fee Calc</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <link rel="stylesheet" href="style.css">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
@@ -10,8 +11,13 @@
     <div class="heading">
         <h1>Court Fee Calculator</h1>
     </div>
-    <div style="display: flex; justify-content:space-around;">
-        <div class="box tab-full">
+    <div id="cfc">
+    <div style="display: flex; justify-content:space-between; margin:5%;">
+      <button type="button" @click="sa=true; oa=false" style="margin-left:5%; margin-right:5%;" class="button" name="button">Securitisation Application (SA)</button>
+      <button type="button" @click="oa=true; sa=false" style="margin-left:5%; margin-right:5%;" class="button" name="button">Original Application (OA)</button>
+    </div>
+    <div style="display: flex; justify-content:space-around; ">
+        <div class="box" v-if="sa">
           <h3>Securitisation Application (SA)</h3>
           <input class="input" type="number" name="amt_sa" placeholder="Amount "><br>
           <span><input type="radio" id="brw" name="sa_type">
@@ -19,21 +25,31 @@
           <span style="margin-left:5%; margin-right:5%;"></span>
           <span><input type="radio" id="tp" name="sa_type">
           <label style="color:#1bbce0;">Third party</label></span><br>
-          <button type="button" class="button" name="button">Calculate</button><br>
+          <button type="button" style="margin:10%;" class="button" name="button">Calculate</button><br>
           <div class="fee">
               Fee:-  ₹0.0/-
           </div>
         </div>
 
-        <div class="box">
+        <div class="box" v-if="oa">
           <h3>Original Application (OA)</h3>
           <input class="input" type="number" name="amt_oa" placeholder="Amount "><br>
           <span></span><br>
-          <button type="button" class="button" name="button">Calculate</button><br>
+          <button type="button" style="margin:10%;" class="button" name="button">Calculate</button><br>
           <div class="fee">
               Fee:-  ₹0.0/-
           </div>
         </div>
     </div>
+    </div>
+    <script>
+      new Vue({
+        el: "#cfc",
+        data: {
+          sa:false,
+          oa:false,
+        },
+      })
+    </script>
   </body>
 </html>

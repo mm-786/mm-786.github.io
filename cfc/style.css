@@ -1,14 +1,10 @@
 body{
   background:#ccd8d6;
   text-align: center;
-  align-items: center;
-  justify-content: center;
 }
 .tab-full {
   width: 100%;
-}
-.col-six{
-	width: 50%;
+  display: inline;
 }
 .heading{
   text-align: center;
@@ -18,18 +14,12 @@ body{
   line-height: 70px;
 }
 
-@media only screen and (max-width:480px) {
-  .box{
-      width: 98%;
-  }
-}
-
 .box{
   text-align: center;
   align-items: center;
   justify-content: center;
   background: #fff;
-  width: 49%;
+  width: 45%;
   height: 440px;
   color: white;
   display: inline-block;
@@ -73,11 +63,9 @@ input[type=number] {
   color: #21ba9e;
 }
 .button{
-  margin: 10%;
   width: 80%;
   background-color: #21ba9e;
   font-size: 15px;
-  font-weight: 400;
   color: #fff;
   text-transform: capitalize;
   padding: 12px 25px;
