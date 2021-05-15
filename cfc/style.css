@@ -8,7 +8,7 @@ body{
 }
 .heading{
   text-align: center;
-  font-size: 45px;
+  font-size:100%;
   font-weight: 700;
   color: #21ba9e;
   line-height: 70px;
@@ -23,6 +23,7 @@ body{
   height: 510px;
   color: white;
   display: inline-block;
+  margin-bottom: 5%;
 }
 
 .box>h3{
