@@ -1,0 +1,76 @@
+body{
+  background:#ebecec;
+  text-align: center;
+}
+.tab-full {
+  width: 100%;
+  display: inline;
+}
+.heading{
+  text-align: center;
+  font-size:100%;
+  font-weight: 700;
+  color: #21ba9e;
+  line-height: 70px;
+}
+
+.box{
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  width: 70%;
+  box-shadow: 10px 10px 5px #21ba9e;
+  height:
+  display: inline-block;
+  margin-bottom: 5%;
+}
+
+.box>h3{
+  color:purple;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.input{
+  width:78%;
+  height: 10%;
+  background-color:#ebecec;
+  border: none;
+  outline: none;
+  font-size: 100%;
+  font-weight: 300;
+  color: #2a2a2a;
+  padding: 0px 5px;
+  margin-bottom: 20px;
+}
+.fee{
+  width: 80%;
+  padding: 1%;
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: #ebecec;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 7%;
+  color: #21ba9e;
+}
+.button{
+  width: 80%;
+  background-color: #21ba9e;
+  font-size: 100%;
+  color: #fff;
+  text-transform: capitalize;
+  padding: 12px 25px;
+  letter-spacing: 0.25px;
+  border: none;
+  outline: none;
+}
