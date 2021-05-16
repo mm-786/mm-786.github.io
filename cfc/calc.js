@@ -1,1 +1,102 @@
-new Vue({el:"#cfc",data:{sa:!1,oa:!1,sAmt:"",oAmt:"",sFee:"Fee:-",oFee:"Fee:-",saType:"",sErr:"",oErr:""},methods:{oCalc:function(){this.oFee="Fee:-",this.oErr="",""!==this.oAmt?this.oAmt>=1e6?(1e6==this.oAmt?this.oFee=12e3:this.oAmt>1e6&&(this.oFee=Math.round(12e3+(this.oAmt-1e6)/1e5*1e3)),this.oFee>=15e4&&(this.oFee=15e4),this.oFee="Fee:- ₹"+this.oFee+"/--"):this.oErr="⚠️ The amount can not be below 1000000 (10 Lakh)":this.oErr="⚠️ The amount field can not be empty.."},sCalc:function(){this.sFee="Fee:-",this.sErr="",""!==this.sAmt?(this.sAmt>=1e5?"Third party"===this.saType?(this.sFee=Math.round(this.sAmt/1e5*125),this.sFee>=5e4&&(this.sFee=5e4),this.sFee="Fee:- ₹"+this.sFee+"/--"):"Borrower"===this.saType&&(this.sAmt>=1e5&&this.sAmt<=1e6?this.sFee=Math.round(this.sAmt/1e5*500):this.sAmt>1e6&&(this.sFee=Math.round(5e3+(this.sAmt-1e6)/1e5*250)),this.sFee>=1e5&&(this.sFee=1e5),this.sFee="Fee:- ₹"+this.sFee+"/--"):this.sErr="⚠️ The amount can not be below 100000 (1 Lakh) \n",""==this.saType&&(this.sErr=this.sErr+"⚠️ Please select whether your borrower or third party")):this.sErr="⚠️ The amount field can not be empty.."}}});
+new Vue({
+  el: "#cfc",
+  data: {
+    sa:false,
+    oa:false,
+    sAmt:'',
+    oAmt:'',
+    sFee:'Fee:-',
+    oFee:'Fee:-',
+    saType:'',
+    sErr:'',
+    oErr:''
+  },
+  methods: {
+oCalc: function () {
+  this.oFee='Fee:-';
+  this.oErr='';
+  if(this.oAmt!=='')
+  {
+    if(this.oAmt >= 1000000)
+    {
+      if(this.oAmt == 1000000)
+      {
+          this.oFee=12000;
+      }
+      else if(this.oAmt > 1000000)
+      {
+        var i = this.oAmt-1000000;
+        i = Math.floor(i/100000);
+        i = i*1000;
+        this.oFee = 12000+i;
+      }
+      if(this.oFee>=150000)
+      {
+        this.oFee=150000;
+      }
+      this.oFee="Fee:- ₹"+this.oFee+"/--"
+    }
+    else{
+      this.oErr="⚠️ The amount can not be below 1000000 (10 Lakh)";
+    }
+}
+else
+{
+  this.oErr="⚠️ The amount field can not be empty..";
+}
+
+},
+sCalc: function () {
+  this.sFee='Fee:-';
+  this.sErr='';
+  if(this.sAmt!=='')
+  {
+    if(this.sAmt>=100000)
+    {
+      if(this.saType==="Third party")
+      {
+          var i = Math.floor(this.sAmt/100000);
+          this.sFee = i*125;
+          if(this.sFee >= 50000){
+            this.sFee=50000;
+          }
+        this.sFee="Fee:- ₹"+this.sFee+"/--"
+      }
+      else if (this.saType==="Borrower")
+      {
+        if(this.sAmt>=100000 && this.sAmt<=1000000)
+        {
+          var i = Math.floor(this.sAmt/100000);
+          this.sFee = i*500;
+        }
+        else if (this.sAmt>1000000)
+        {
+          var i = this.sAmt-1000000;
+          i=Math.floor(i/100000)
+          i=i*250;
+          this.sFee = 5000+i;
+        }
+        if(this.sFee >= 100000)
+        {
+          this.sFee=100000;
+        }
+        this.sFee="Fee:- ₹"+this.sFee+"/--"
+      }
+    }
+    else
+    {
+      this.sErr="⚠️ The amount can not be below 100000 (1 Lakh) \n";
+    }
+
+    if(this.saType=='')
+    {
+      this.sErr=this.sErr+"⚠️ Please select whether your borrower or third party";
+    }
+  }
+  else
+  {
+    this.sErr="⚠️ The amount field can not be empty..";
+  }
+}
+}
+})
