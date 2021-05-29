@@ -30,16 +30,18 @@
    <script src="js/modernizr.js"></script>
    <script src="js/pace.min.js"></script>
    <script>
+   if('serviceWorker' in navigator){
+     navigator.serviceWorker.register('service-worker.js');
+   } else {
+     console.log("Service worker is not supported");
+   }
+
    window.addEventListener('contextmenu', function (e) {
    e.preventDefault();
    }, false);
    </script>
    <script>
-    if('serviceWorker' in navigator){
-      navigator.serviceWorker.register('/service-worker.js');
-    } else {
-      console.log("Service worker is not supported");
-    }
+
   </script>
 
    <!-- favicons
