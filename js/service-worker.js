@@ -1,5 +1,5 @@
 const CACHE_NAME  = 'Murtaza M';
-let resourcesToCache = ["./", "./images/", "./js/", "./css/","./fonts",""];
+let resourcesToCache = ["./", "./images/intro-bg.jpg","./images/profile-pic.jpg", "./js/", "./css/","./fonts"];
 
 self.addEventListener("install", e=>{
     e.waitUntil(
