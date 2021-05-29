@@ -1,0 +1,23 @@
+{
+    "name": "Murtaza M",
+    "short_name": "Murtaza M",
+    "start_url": "/index.html",
+    "background_color": "#1f1f1f",
+    "theme_color": "#db4317",
+    "icons": [
+        {
+            "src": "profile-pic.jpg",
+            "sizes": "512x512",
+            "type": "image/jpg",
+            "purpose": "maskable any"
+        },
+        {
+            "src": "profile-pic-min.jpg",
+            "sizes": "192x192",
+            "type": "image/jpg",
+            "purpose": "maskable any"
+        }
+    ],
+    "display": "standalone",
+    "orientation":"portrait"
+}
