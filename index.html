@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
 <!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
    <!--- basic page needs
    ================================================== -->
    <meta charset="utf-8">
@@ -510,10 +511,10 @@
    ================================================== -->
 
    <footer>
-     	<div class="row">
+     	<div class="row" id="footer">
       	<div class="col-six tab-full">
 	      	<div class="copyright">
-		        	<span>Copyright © 2021. Murtaza Mundrawala. All rights reserved</span>
+		        	<span>Copyright © {{yr}}. Murtaza Mundrawala. All rights reserved</span>
 		         </div>
 	      	</div>
 
@@ -522,6 +523,14 @@
 		      </div>
 
       	</div> <!-- /row -->
+        <script>
+        new Vue({
+            el: '#footer',
+            data: {
+            yr: new Date().getFullYear()
+            }
+          })
+        </script>
    </footer>
 
    <div id="preloader">

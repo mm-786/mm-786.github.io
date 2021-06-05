@@ -18,7 +18,7 @@
     	$("#loader").fadeOut("slow", function(){
 
         // will fade out the whole DIV that covers the website.
-        $("#preloader").delay(300).fadeOut("slow");
+        $("#preloader").delay(150).fadeOut("slow");
 
       });
 
@@ -224,7 +224,7 @@
 
 			var sLoader = $('#submit-loader');
 
-			$.ajax({      	
+			$.ajax({
 		      data: $(form).serialize(),
 		      beforeSend: function() {
 
