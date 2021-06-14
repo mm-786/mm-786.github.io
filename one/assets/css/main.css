@@ -1335,7 +1335,7 @@ ul.actions {
       flex-shrink: 1;
       width: 100%; }
       ul.actions.fit li > * {
-        width: 100%; }
+        width: 150%;}
     ul.actions.fit.stacked {
       width: 100%; }
 
@@ -1460,19 +1460,19 @@ table {
     padding: 0 0.75em 0.75em 0.75em;
     text-align: left; }
   table thead {
-    border-bottom: solid 2px rgba(210, 215, 217, 0.75); }
+    border-bottom: solid 0px rgba(210, 215, 217, 0.75); }
   table tfoot {
-    border-top: solid 2px rgba(210, 215, 217, 0.75); }
+    border-top: solid 0px rgba(210, 215, 217, 0.75); }
   table.alt {
     border-collapse: separate; }
     table.alt tbody tr td {
-      border: solid 1px rgba(210, 215, 217, 0.75);
+      border: solid 0px rgba(210, 215, 217, 0.75);
       border-left-width: 0;
       border-top-width: 0; }
       table.alt tbody tr td:first-child {
-        border-left-width: 1px; }
+        border-left-width: 0px; }
     table.alt tbody tr:first-child td {
-      border-top-width: 1px; }
+      border-top-width: 0px; }
     table.alt thead {
       border-bottom: 0; }
     table.alt tfoot {
@@ -1533,7 +1533,8 @@ button,
   input[type="button"].fit,
   button.fit,
   .button.fit {
-    width: 100%; }
+    width: 100%;
+    }
   input[type="submit"].small,
   input[type="reset"].small,
   input[type="button"].small,
