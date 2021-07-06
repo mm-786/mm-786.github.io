@@ -6,8 +6,9 @@
 -->
 <html>
 	<head>
-		<title>LegalPhilia</title>
+		<title>DB'Topis</title>
 		<meta charset="utf-8" />
+		<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
@@ -20,64 +21,92 @@
 					<div id="main">
 						<div class="inner">
 
+							<!-- Header -->
+								<!-- <header id="header">
+									<a href="index.html" class="logo"><strong>Editorial</strong> by HTML5 UP</a>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+									</ul>
+								</header> -->
 
 							<!-- Banner -->
 								<section id="banner">
-									<div class="content" style="justify-content:space-between;">
+									<div class="content">
 										<header>
-											<h1  style="display:inline;">LegalPhilia</h1><p style="display:inline; margin-left:30px;"><i>tag line of LegalPhilia</i></p>
+											<img src="./images/logo.svg" width="150" height="150"/>
 										</header>
+										<!-- <ul class="actions">
+											<li><a href="#" class="button big">Learn More</a></li>
+										</ul> -->
+									</div>
 								</section>
 
 							<!-- Section -->
 								<section>
 									<header class="major">
-										<h2>Format</h2>
+										<h2>Add Your Design</h2>
 									</header>
-									<div class="table-wrapper">
-										<table class="alt">
-											<thead>
-												<tr>
-													<th style="width:10%;">Sr. No.</th>
-													<th style="width:80%;">Title</th>
-													<th style="width:10%;">Download</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>1</td>
-													<td>Petitions</td>
-													<td><a href="#" class="icon solid fa-download"></a></td>
-												</tr>
-												<tr>
-													<td>2</td>
-													<td>Complaints</td>
-													<td><a href="#" class="icon solid fa-download"></a></td>
-												</tr>
-												<tr>
-													<td>3</td>
-													<td>Plaint</td>
-													<td><a href="#" class="icon solid fa-download"></a></td>
-												</tr>
-												<tr>
-													<td>4</td>
-													<td>WS</td>
-													<td><a href="#" class="icon solid fa-download"></a></td>
-												</tr>
-												<tr>
-													<td>5</td>
-													<td>Affidavit</td>
-													<td><a href="#" class="icon solid fa-download"></a></td>
-												</tr>
-												<tr>
-													<td>6</td>
-													<td>Forms</td>
-													<td><a href="#" class="icon solid fa-download"></a></td>
-												</tr>
-											</tbody>
-										</table>
+									<div id="ayd">
+										<div class="col-6 col-12-xsmall">
+											<input type="text" name="row" id="demo-name" v-model="row" placeholder="Row" />
+										</div>
+										<br/>
+										<div class="col-6 col-12-xsmall">
+											<input type="text" name="column" id="demo-name" v-model="col" placeholder="Column" />
+										</div>
+									<br/>
+										<div class="col-12">
+											<select name="demo-category" id="demo-category" v-model="cat" onselect="a">
+												<option value="">- Category -</option>
+												<option value="wpd" >White Patto</option>
+												<option value="kd">Kasab</option>
+											</select>
+										</div>
+										<div style="margin:50px;">
+											<table align="center" border=1>
+								          <tr v-for='r in parseInt(row)'>
+								              <td width='25' height='25' color=#DAA520 v-for='c in parseInt(col)'>
+
+								              </td>
+								            </tr>
+								      </table>
+										</div>
+										<input type="submit" value="Submit" />
+										{{dArr}}
 									</div>
 
+									<script>
+									new Vue({
+											el: '#ayd',
+												data: {
+													row:0,
+													col:0,
+													dArr:null,
+													cat:'',
+												},
+													computed:{
+														a(){
+														const m = this.row;
+														const  n = this.col;
+														let arr = new Array(m); // create an empty array of length n
+														for (var i = 0; i < m; i++) {
+  													arr[i] = new Array(n); // make each element an array
+													}
+													for (var i = 0; i < m; i++) {
+														for (var j = 0; j < n; i++) {
+															arr[i][j]=0;
+														}
+													}
+													alert(arr);
+													this.dArr=arr;
+													}
+												}
+											})
+									</script>
 								</section>
 
 							<!-- Section
@@ -153,84 +182,12 @@
 									</header>
 									<ul>
 										<li><a href="index.html">Homepage</a></li>
-										<li><a href="#">My Blog</a></li>
-										<li>
-											<span class="opener">Court Tools</span>
-											<ul>
-												<li><a href="#">Court Jurisdiction Finder</a></li>
-												<li><a href="#">DRT Court Fee Calculator</a></li>
-												<li><a href="#">Court Fee Calculator</a></li>
-											</ul>
-										</li>
-										<li><a href="format.html">Format</a></li>
-										<li><a href="#">Affilate Marketing</a></li>
+										<li><a href="wpd.html">White Patto Design</a></li>
+										<li><a href="kd.html">Kasab Design</a></li>
+										<li><a href="ayd.html">Add Your Design</a></li>
 									</ul>
 								</nav>
 
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Delhi Court Legal Updates</h2>
-									</header>
-									<div class="mini-posts" style="height:250px;">
-										<h3 style="color:#f56a6a;">Notifications</h3>
-										<marquee direction = "up" scrollamount=2.5 onMouseOver="this.stop()" onMouseOut="this.start()">
-										<article>
-											<h4>notification 1</h4>
-											<p>dispriction</p>
-										</article>
-										<article>
-											<h4>notification 2</h4>
-											<p>dispriction</p>
-										</article>
-										<article>
-											<h4>notification 3</h4>
-											<p>dispriction</p>
-										</article>
-										<article>
-										<h4>notification 4</h4>
-										<p>dispriction</p>
-									</article>
-									<article>
-										<h4>notification 5</h4>
-										<p>dispriction</p>
-									</article>
-									<article>
-										<h4>notification 6</h4>
-										<p>dispriction</p>
-									</article>
-								</marquee>
-									</div>
-									<div class="mini-posts">
-										<h3 style="color:#f56a6a;">Bail Roasters</h3>
-										<marquee direction = "up" scrollamount=2.5 onMouseOver="this.stop()" onMouseOut="this.start()">
-										<article>
-											<h4>Bail Roasters 1</h4>
-											<p>dispriction</p>
-										</article>
-										<article>
-											<h4>Bail Roasters 2</h4>
-											<p>dispriction</p>
-										</article>
-										<article>
-											<h4>Bail Roasters 3</h4>
-											<p>dispriction</p>
-										</article>
-										<article>
-											<h4>Bail Roasters 4</h4>
-											<p>dispriction</p>
-										</article>
-										<article>
-											<h4>Bail Roasters 5</h4>
-											<p>dispriction</p>
-										</article>
-										<article>
-											<h4>Bail Roasters 6</h4>
-											<p>dispriction</p>
-										</article>
-									</marquee>
-									</div>
-								</section>
 
 							<!-- Section -->
 								<section>
@@ -238,16 +195,14 @@
 										<h2>Get in touch</h2>
 									</header>
 									<ul class="contact">
-										<li class="icon solid fa-envelope"><a href="#">anb@pqr.in</a></li>
-										<li class="icon solid fa-phone">(000) 000-0000</li>
-										<li class="icon solid fa-home">Somewhere in Delhi</li>
+										<li class="icon solid fa-envelope"><a href="#">dbtopis@mundrawala.ml</a></li>
 									</ul>
 								</section>
 
 							<!-- Footer -->
 								<footer id="footer">
-									<p class="copyright">&copy; LegalPhilia. All rights reserved.</p>
-										<p class="copyright">Design with ❤ by : <a href="">Murtaza Mundrawala</a>.</p>
+									<p class="copyright">&copy; DB'Topis. All rights reserved.</p>
+										<p class="copyright">Design with ❤ by : <a href="">Murtaza M.</a>.</p>
 								</footer>
 
 						</div>
