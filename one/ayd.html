@@ -21,19 +21,6 @@
 					<div id="main">
 						<div class="inner">
 
-							<!-- Header -->
-								<!-- <header id="header">
-									<a href="index.html" class="logo"><strong>Editorial</strong> by HTML5 UP</a>
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
-									</ul>
-								</header> -->
-
-							<!-- Banner -->
 								<section id="banner">
 									<div class="content">
 										<header>
@@ -51,26 +38,27 @@
 										<h2>Add Your Design</h2>
 									</header>
 									<div id="ayd">
-										<div class="col-6 col-12-xsmall">
-											<input type="text" name="row" id="demo-name" v-model="row" placeholder="Row" />
-										</div>
-										<br/>
-										<div class="col-6 col-12-xsmall">
-											<input type="text" name="column" id="demo-name" v-model="col" placeholder="Column" />
-										</div>
-									<br/>
 										<div class="col-12">
-											<select name="demo-category" id="demo-category" v-model="cat" onselect="a">
-												<option value="">- Category -</option>
+											<select name="demo-category" id="demo-category" v-model="cat" @change="">
+												<option value=''>- Category -</option>
 												<option value="wpd" >White Patto</option>
 												<option value="kd">Kasab</option>
 											</select>
 										</div>
+										<br/>
+										<div v-if="cat!==''" class="col-6 col-12-xsmall">
+											<input type="text" name="row" id="demo-name" v-model="row" placeholder="Row" @change="a()" />
+										</div>
+										<br/>
+										<div v-if="cat!==''" class="col-6 col-12-xsmall">
+											<input type="text" name="column" id="demo-name" v-model="col" placeholder="Column" @change="a()" />
+										</div>
+									<br/>
 										<div style="margin:50px;">
 											<table align="center" border=1>
-								          <tr v-for='r in parseInt(row)'>
-								              <td width='25' height='25' color=#DAA520 v-for='c in parseInt(col)'>
-
+								          <tr v-for='r in parseInt(row)' style="height:30px;">
+								              <td @click="mark(r-1,c-1)" color=#DAA520 v-for='c in parseInt(col)' style="align-items: center; position: static; width:30px; height:30px ; text-align: center;">
+												{{dArr[r-1][c-1]}}
 								              </td>
 								            </tr>
 								      </table>
@@ -85,26 +73,41 @@
 												data: {
 													row:0,
 													col:0,
-													dArr:null,
+													dArr:[],
 													cat:'',
+													
 												},
-													computed:{
-														a(){
-														const m = this.row;
-														const  n = this.col;
-														let arr = new Array(m); // create an empty array of length n
-														for (var i = 0; i < m; i++) {
-  													arr[i] = new Array(n); // make each element an array
+												methods:{
+													mark(r,c){
+														if(this.dArr[r][c]==='⚪'){
+															this.dArr[r][c]='⚫';
+														}
+														else{
+															this.dArr[r][c]='⚪';
+															
+														}
+														this.$forceUpdate()
+													},
+													a(){
+													const m = this.row;
+													const  n = this.col;
+													var arr = [];
+												if(m!==0 && n!==0){
+													for (var i = 0; i < m; i++) {
+														var temp = [10*i]
+														arr.push(temp)
 													}
 													for (var i = 0; i < m; i++) {
-														for (var j = 0; j < n; i++) {
-															arr[i][j]=0;
+														for (var j = 0; j < n; j++) {
+														
+															arr[i][j]='⚪';
 														}
 													}
-													alert(arr);
-													this.dArr=arr;
-													}
+													this.dArr = arr;
 												}
+										
+												},
+											}
 											})
 									</script>
 								</section>
