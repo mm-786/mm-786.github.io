@@ -9,9 +9,6 @@
 		<title>DB'Topis</title>
 		<meta charset="utf-8" />
 		<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
-		<script type="module">
-			import deta from "./node_modules/deta";
-		</script>
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
@@ -73,8 +70,13 @@
 										</div>
 										<input v-if="row!==0 && col!==0" type="submit" value="Submit" />
 									</div>
-									
+									<script type="module">
+									import DT from './node_modules/deta';
+									const deta = DT("c06h981w_T2EgP5tkU2KDNZAPK95RYed1Xq5kef1o")
+									alert(deta)
+									</script>
 									<script>
+									
 									new Vue({
 											el: '#ayd',
 												data: {

@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "deta": "^1.0.0"
+    "deta": "^1.0.0",
+    "requirejs": "^2.3.6"
   }
 }
