@@ -30,6 +30,7 @@
 											<li><a href="#" class="button big">Learn More</a></li>
 										</ul> -->
 									</div>
+									
 								</section>
 
 							<!-- Section -->
@@ -41,49 +42,53 @@
 										<div class="col-12">
 											<select name="demo-category" id="demo-category" v-model="cat" @change="">
 												<option value=''>- Category -</option>
-												<option value="wpd" >White Patto</option>
-												<option value="kd">Kasab</option>
+												<option value="kp" >Kasab Patto</option>
+												<option value="k">Kasab</option>
 											</select>
 										</div>
 										<br/>
 										<div v-if="cat!==''" class="col-6 col-12-xsmall">
-											<input type="text" name="row" id="demo-name" v-model="row" placeholder="Row" @change="a()" />
+											<input type="text" name="name" v-model="name" placeholder="Anonymous" />
 										</div>
 										<br/>
 										<div v-if="cat!==''" class="col-6 col-12-xsmall">
-											<input type="text" name="column" id="demo-name" v-model="col" placeholder="Column" @change="a()" />
+											<input type="text" name="row" v-model="row" placeholder="Row" @change="a()" />
+										</div>
+										<br/>
+										<div v-if="cat!==''" class="col-6 col-12-xsmall">
+											<input type="text" name="column" v-model="col" placeholder="Column" @change="a()" />
 										</div>
 									<br/>
-										<div style="margin:50px;">
+										<div style="margin:10px;">
 											<table align="center" border=1>
 								          <tr v-for='r in parseInt(row)' style="height:30px;">
 								              <td @click="mark(r-1,c-1)" color=#DAA520 v-for='c in parseInt(col)' style="align-items: center; position: static; width:30px; height:30px ; text-align: center;">
-												{{dArr[r-1][c-1]}}
+												<img :src="dArr[r-1][c-1]? './images/dot.png':'./images/blank.png'" width="30px" height="30px"/>
 								              </td>
 								            </tr>
 								      </table>
 										</div>
-										<input type="submit" value="Submit" />
-										{{dArr}}
+										<input v-if="row!==0 && col!==0" type="submit" value="Submit" />
 									</div>
-
+									
 									<script>
 									new Vue({
 											el: '#ayd',
 												data: {
 													row:0,
 													col:0,
+													name:'',
 													dArr:[],
 													cat:'',
 													
 												},
 												methods:{
 													mark(r,c){
-														if(this.dArr[r][c]==='⚪'){
-															this.dArr[r][c]='⚫';
+														if(this.dArr[r][c]===0){
+															this.dArr[r][c]=1;
 														}
 														else{
-															this.dArr[r][c]='⚪';
+															this.dArr[r][c]=0;
 															
 														}
 														this.$forceUpdate()
@@ -94,13 +99,13 @@
 													var arr = [];
 												if(m!==0 && n!==0){
 													for (var i = 0; i < m; i++) {
-														var temp = [10*i]
+														var temp = []
 														arr.push(temp)
 													}
 													for (var i = 0; i < m; i++) {
 														for (var j = 0; j < n; j++) {
 														
-															arr[i][j]='⚪';
+															arr[i][j]=0;
 														}
 													}
 													this.dArr = arr;
@@ -185,7 +190,7 @@
 									</header>
 									<ul>
 										<li><a href="index.html">Homepage</a></li>
-										<li><a href="wpd.html">White Patto Design</a></li>
+										<li><a href="wpd.html">Kasab Patto Design</a></li>
 										<li><a href="kd.html">Kasab Design</a></li>
 										<li><a href="ayd.html">Add Your Design</a></li>
 									</ul>
