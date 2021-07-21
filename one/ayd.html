@@ -8,6 +8,9 @@
 	<head>
 		<title>DB'Topis</title>
 		<meta charset="utf-8" />
+		<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-firestore.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -40,7 +43,7 @@
 									</header>
 									<div id="ayd">
 										<div class="col-12">
-											<select name="demo-category" id="demo-category" v-model="cat" @change="">
+											<select name="demo-category" id="demo-category" v-model="cat" @change="" required>
 												<option value=''>- Category -</option>
 												<option value="kp" >Kasab Patto</option>
 												<option value="k">Kasab</option>
@@ -52,29 +55,25 @@
 										</div>
 										<br/>
 										<div v-if="cat!==''" class="col-6 col-12-xsmall">
-											<input type="text" name="row" v-model="row" placeholder="Row" @change="a()" />
+											<input type="text" name="row" v-model="row" placeholder="Row" @change="a()" required/>
 										</div>
 										<br/>
 										<div v-if="cat!==''" class="col-6 col-12-xsmall">
-											<input type="text" name="column" v-model="col" placeholder="Column" @change="a()" />
+											<input type="text" name="column" v-model="col" placeholder="Column" @change="a()" required/>
 										</div>
 									<br/>
 										<div style="margin:10px;">
 											<table align="center" border=1>
-								          <tr v-for='r in parseInt(row)' style="height:30px;">
+								          <tr v-for='r in parseInt(row)'>
 								              <td @click="mark(r-1,c-1)" color=#DAA520 v-for='c in parseInt(col)' style="align-items: center; position: static; width:30px; height:30px ; text-align: center;">
-												<img :src="dArr[r-1][c-1]? './images/dot.png':'./images/blank.png'" width="30px" height="30px"/>
+												<img :src="dArr[r-1][c-1]? './images/dot.png':'./images/blank.png'" width="20px" height="20px"/>
 								              </td>
 								            </tr>
 								      </table>
 										</div>
 										<input v-if="row!==0 && col!==0" type="submit" value="Submit" />
 									</div>
-									<script type="module">
-									import DT from './node_modules/deta';
-									const deta = DT("c06h981w_T2EgP5tkU2KDNZAPK95RYed1Xq5kef1o")
-									alert(deta)
-									</script>
+									
 									<script>
 									
 									new Vue({
@@ -86,6 +85,33 @@
 													dArr:[],
 													cat:'',
 													
+												},
+												mounted(){
+													var firebaseConfig = {
+														apiKey: "AIzaSyDr13wzCnxT_wxsdlPbXnXjCCZ53TcdNCo",
+														authDomain: "db-topis-design.firebaseapp.com",
+														projectId: "db-topis-design",
+														storageBucket: "db-topis-design.appspot.com",
+														messagingSenderId: "606381818296",
+														appId: "1:606381818296:web:64ad68f5cf1089a34d4f4d",
+														measurementId: "G-09QEQRRWM6"
+														};
+													firebase.initializeApp(firebaseConfig);
+  													firebase.analytics();
+													var db = firebase.firestore();
+
+													// 		db.collection("users").add({
+													// 		first: "murtaza",
+													// 		last: "mundrawala",
+													// 		born: 1998
+													// 		})
+													// .then((docRef) => {
+													// 	console.log("Document written with ID: ", docRef.id);
+													// })
+													// .catch((error) => {
+													// 	console.error("Error adding document: ", error);
+													// });
+
 												},
 												methods:{
 													mark(r,c){
