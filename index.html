@@ -309,6 +309,7 @@
             methods:{
               send(e){
                 e.preventDefault();
+		       if(this.name!=='' && this.email!=='' && this.msg!==''){
                 this.db.collection('msg').add({
                   name:this.name,
                   email:this.email,
@@ -318,6 +319,7 @@
                   this.email=''
                   this.msg=''
                 })
+		       }
               }
             }
   
@@ -360,4 +362,3 @@
     <script src="./scripts/main.js?ver=1.2.0"></script>
   </body>
 </html>
-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
