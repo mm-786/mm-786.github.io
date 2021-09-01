@@ -2,17 +2,22 @@
 <!-- upto 2 directory depth-->
 <html lang="en-US">
   <head>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-firestore.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mundrawala</title>
+  
     <link rel="icon" href="favicon.png" type="image/png" sizes="12x12">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;800&amp;display=swap"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;800&amp;display=swap" media="print" onload="this.media='all'"/>
     <noscript>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;800&amp;display=swap"/>
-    </noscript>
+      </noscript>
     <link href="./css/font-awesome/css/all.min.css?ver=1.2.0" rel="stylesheet">
     <link href="./css/bootstrap-icons/bootstrap-icons.css?ver=1.2.0" rel="stylesheet">
     <link href="./css/bootstrap.min.css?ver=1.2.0" rel="stylesheet">
@@ -26,8 +31,11 @@
         }
       </style>
     </noscript>
+    
+    
   </head>
-  <body id="top">
+  <body id="mrtz">
+   
     <header class="bg-light">
       <nav class="navbar navbar-expand-lg navbar-light bg-light" id="header-nav" role="navigation">
         <div class="container"><a class="link-dark navbar-brand site-title mb-0" href="#"><img src="images/logo.png" alt=""></a>
@@ -37,8 +45,6 @@
               <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
               <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
               <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-              <!-- <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li> -->
-              <!-- <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li> -->
               <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
             </ul>
           </div>
@@ -205,190 +211,6 @@
     </div>
   </div>
 </div>
-<!-- <div class="section px-2 px-lg-4 pt-5" id="portfolio">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="marker marker-center">Portfolio </h2>
-    </div>
-    <div class="grid bp-gallery pb-3" data-aos="zoom-in-up" data-aos-delay="100">
-      <div class="grid-sizer"></div>
-      <div class="grid-item"><a href="https://dribbble.com">
-          <figure class="portfolio-item"><img src="images/portfolio/1-small.png" data-bp="images/portfolio/1.jpg"/>
-            <figcaption>
-              <h4 class="h5 mb-0">Web Design</h4>
-              <div>Dribbble.com</div>
-            </figcaption>
-          </figure></a></div>
-      <div class="grid-item"><a href="https://github.com">
-          <figure class="portfolio-item"><img src="images/portfolio/2-small.png" data-bp="images/portfolio/2.jpg" data-caption="Example of an optional caption."/>
-            <figcaption> 
-              <h4 class="h5 mb-0">Web Development</h4>
-              <div>GitHub.com</div>
-            </figcaption>
-          </figure></a></div>
-      <div class="grid-item"><a href="https://soundcloud.com/">
-          <figure class="portfolio-item"><img src="images/portfolio/3-small.png" data-bp="images/portfolio/3.jpg" data-caption="Example of an optional caption."/>
-            <figcaption> 
-              <h4 class="h5 mb-0">Audio Mixing</h4>
-              <div>Soundcloud.com</div>
-            </figcaption>
-          </figure></a></div>
-      <div class="grid-item"><a href="https://www.adobe.com/">
-          <figure class="portfolio-item"><img src="images/portfolio/4-small.png" data-bp="images/portfolio/4.jpg"/>
-            <figcaption>
-              <h4 class="h5 mb-0">Video Editing</h4>
-              <div>Adobe After Effects</div>
-            </figcaption>
-          </figure></a></div>
-      <div class="grid-item"><a href="https://www.adobe.com/">
-          <figure class="portfolio-item"><img src="images/portfolio/5-small.png" data-bp="images/portfolio/5.jpg"/>
-            <figcaption>
-              <h4 class="h5 mb-0">Photography</h4>
-              <div>Adobe Photoshop</div>
-            </figcaption>
-          </figure></a></div>
-      <div class="grid-item"><a href="https://www.android.com/">
-          <figure class="portfolio-item"><img src="images/portfolio/6-small.png" data-bp="images/portfolio/6.jpg"/>
-            <figcaption>
-              <h4 class="h5 mb-0">App Development</h4>
-              <div>Android</div>
-            </figcaption>
-          </figure></a></div>
-      <div class="grid-item"><a href="https://flutter.dev/">
-          <figure class="portfolio-item"><img src="images/portfolio/7-small.png" data-bp="images/portfolio/7.jpg"/>
-            <figcaption>
-              <h4 class="h5 mb-0">App Design</h4>
-              <div>Flutter</div>
-            </figcaption>
-          </figure></a></div>
-      <div class="grid-item"><a href="https://flutter.dev/">
-          <figure class="portfolio-item"><img src="images/portfolio/8-small.png" data-bp="images/portfolio/8.jpg"/>
-            <figcaption>
-              <h4 class="h5 mb-0">App Development</h4>
-              <div>Flutter</div>
-            </figcaption>
-          </figure></a></div>
-    </div>
-  </div>
-</div> -->
-<!-- <div class="section px-3 px-lg-4 pt-5" id="experience">
-  <div class="container-narrow">
-    <div class="text-center mb-5">
-      <h2 class="marker marker-center">Experience</h2>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-        <div class="card mb-3" data-aos="fade-right" data-aos-delay="100">
-          <div class="card-header px-3 py-2">
-            <div class="d-flex justify-content-between">
-              <div>
-                <h3 class="h5 mb-1">UI/UX Design</h3>
-                <div class="text-muted text-small">Designerr Inc. <small>(2012-2014)</small></div>
-              </div><img src="images/services/ui-ux.svg" width="48" height="48" alt="ui-ux"/>
-            </div>
-          </div>
-          <div class="card-body px-3 py-2">
-            <p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
-            <p>Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="card mb-3" data-aos="fade-left" data-aos-delay="300">
-          <div class="card-header px-3 py-2">
-            <div class="d-flex justify-content-between">
-              <div>
-                <h3 class="h5 mb-1">App Development</h3>
-                <div class="text-muted text-small">MakeMyApp LLC. <small>(2015-2018)</small></div>
-              </div><img src="images/services/app-development.svg" width="48" height="48" alt="app development"/>
-            </div>
-          </div>
-          <div class="card-body px-3 py-2">
-            <p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
-            <p>Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="card mb-3" data-aos="fade-right" data-aos-delay="200">
-          <div class="card-header px-3 py-2">
-            <div class="d-flex justify-content-between">
-              <div>
-                <h3 class="h5 mb-1">Web Design</h3>
-                <div class="text-muted text-small">Webbie LLC. <small>(2018-2020)</small></div>
-              </div><img src="images/services/web-design.svg" width="48" height="48" alt="web design"/>
-            </div>
-          </div>
-          <div class="card-body px-3 py-2">
-            <p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
-            <p>Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="card mb-3" data-aos="fade-left" data-aos-delay="400">
-          <div class="card-header px-3 py-2">
-            <div class="d-flex justify-content-between">
-              <div>
-                <h3 class="h5 mb-1">Full Stack Development</h3>
-                <div class="text-muted text-small">Coder Inc. <small>(2020-2021)</small></div>
-              </div><img src="images/services/full-stack.svg" width="48" height="48" alt="full stack"/>
-            </div>
-          </div>
-          <div class="card-body px-3 py-2">
-            <p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
-            <p>Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
-<!-- <div class="section px-3 px-lg-4 pt-5" id="testimonials">
-  <div class="container-narrow">
-    <div class="text-center mb-5">
-      <h2 class="marker marker-center">Client Testimonials</h2>
-    </div>
-    <div class="row"> 
-      <div class="col-md-6 mb-5" data-aos="fade-right" data-aos-delay="100">
-        <div class="d-flex ms-md-3"><span><i class="fas fa-2x fa-quote-left"></i></span><span class="m-2">Walter displays exemplary professionalism and is able to take on challenges. He learns quickly and is an asset to any team.</span></div>
-        <div class="d-flex justify-content-end align-items-end">
-          <div class="text-end me-2">
-            <div class="fw-bolder">Aiyana</div>
-            <div class="text-small">CEO / Web Design Company</div>
-          </div><img class="me-md-3 rounded" src="images/testimonials/client1.jpg" width="96" height="96" alt="client 1"/>
-        </div>
-      </div>
-      <div class="col-md-6 mb-5" data-aos="fade-left" data-aos-delay="300">
-        <div class="d-flex ms-md-3"><span><i class="fas fa-2x fa-quote-left"></i></span><span class="m-2">Walter displays exemplary professionalism and is able to take on challenges. He learns quickly and is an asset to any team.</span></div>
-        <div class="d-flex justify-content-end align-items-end">
-          <div class="text-end me-2">
-            <div class="fw-bolder">Alexander</div>
-            <div class="text-small">CEO / Web Design Company</div>
-          </div><img class="me-md-3 rounded" src="images/testimonials/client2.jpg" width="96" height="96" alt="client 1"/>
-        </div>
-      </div>
-      <div class="col-md-6 mb-5" data-aos="fade-right" data-aos-delay="200">
-        <div class="d-flex ms-md-3"><span><i class="fas fa-2x fa-quote-left"></i></span><span class="m-2">Walter is a great co-worker and problem solver. He is quick to extend his helping hand and makes a good team player.</span></div>
-        <div class="d-flex justify-content-end align-items-end">
-          <div class="text-end me-2">
-            <div class="fw-bolder">Ariya</div>
-            <div class="text-small">Web Developer</div>
-          </div><img class="me-md-3 rounded" src="images/testimonials/client3.jpg" width="96" height="96" alt="client 1"/>
-        </div>
-      </div>
-      <div class="col-md-6 mb-5" data-aos="fade-left" data-aos-delay="400">
-        <div class="d-flex ms-md-3"><span><i class="fas fa-2x fa-quote-left"></i></span><span class="m-2">Walter is a great co-worker and problem solver. He is quick to extend his helping hand and makes a good team player.</span></div>
-        <div class="d-flex justify-content-end align-items-end">
-          <div class="text-end me-2">
-            <div class="fw-bolder">Braiden</div>
-            <div class="text-small">Web Designer</div>
-          </div><img class="me-md-3 rounded" src="images/testimonials/client4.jpg" width="96" height="96" alt="client 1"/>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
 <div class="section px-2 px-lg-4 pb-4 pt-5 mb-5" id="contact">
   <div class="container-narrow">
     <div class="text-center mb-5">
@@ -399,20 +221,85 @@
         <div class="bg-light my-2 p-3 pt-2"><form>
     <div class="form-group my-2">
       <label for="name" class="form-label fw-bolder">Name</label>
-      <input class="form-control" type="text" id="name" name="name" required>
+      <input class="form-control" type="text" id="name" name="name" v-model="name" required>
     </div>
     <div class="form-group my-2">
       <label for="email" class="form-label fw-bolder">Email</label>
-      <input class="form-control" type="email" id="email" name="_replyto" required>
+      <input class="form-control" type="email" id="email" name="_replyto" v-model="email" required>
     </div>
   <div class="form-group my-2">
     <label for="message" class="form-label fw-bolder">Message</label>
-    <textarea class="form-control" style="resize: none;" id="message" name="message" rows="4" required></textarea>
+    <textarea class="form-control" style="resize: none;" id="message" name="message" rows="4" v-model="msg" required></textarea>
   </div>
-  <button class="btn btn-primary mt-2" type="submit">Send</button>
+  <button class="btn btn-primary mt-2" type="submit" @click="send">Send</button>
 </form>
         </div>
       </div>
+      <script>
+        new Vue({
+          el:'#contact',
+          data:{
+            visit:0,
+            time:[],
+            db:null,
+            name:'',
+            email:'',
+            msg:'',
+          },
+          mounted(){
+            var firebaseConfig = {
+              apiKey: "AIzaSyCe2BPuZNlqiTPO6_qoKt75-rOkPsQ7o5k",
+              authDomain: "mundrawala-b3bc4.firebaseapp.com",
+              projectId: "mundrawala-b3bc4",
+              storageBucket: "mundrawala-b3bc4.appspot.com",
+              messagingSenderId: "792118701419",
+              appId: "1:792118701419:web:237503548247e5fcf8f02e",
+              measurementId: "G-VVPSWYND3Y"
+              };
+              firebase.initializeApp(firebaseConfig);
+              firebase.analytics();
+              this.db = firebase.firestore();
+              var log = window.localStorage.getItem("mdrwlUser");
+              if(log===null)
+              {
+                this.db.collection("usercnt").add({
+                  cnt:1,
+                  time:[new Date()]
+                }).then((d)=>{
+                  window.localStorage.setItem('mdrwlUser',d.id)
+                })
+              }
+              else{
+                this.db.collection('usercnt').doc(log).get().then((d)=>{
+                  this.visit = parseInt(d.data().cnt)+1;
+                  this.time = d.data().time;
+                  this.time.push(new Date())
+                  this.db.collection('usercnt').doc(log).update({
+                    cnt:this.visit,
+                    time:this.time
+                  })
+                })
+              }
+            },
+            methods:{
+              send(e){
+                e.preventDefault();
+                this.db.collection('msg').add({
+                  name:this.name,
+                  email:this.email,
+                  msg:this.msg
+                }).then(()=>{
+                  this.name=''
+                  this.email=''
+                  this.msg=''
+                })
+              }
+            }
+  
+        })
+      </script>
+      
+     
       <div class="col-md-6" data-aos="fade-left" data-aos-delay="300">
         <div class="mt-3 px-1">
           <div class="h5">Let’s talk how I can help you!</div>
