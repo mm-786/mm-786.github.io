@@ -46,6 +46,7 @@
               <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
               <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
               <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+		<li class="nav-item"><a class="nav-link" href="./old/MURTAZA-MUNDRAWALA.pdf">Resume</a></li>
             </ul>
           </div>
         </div>
@@ -309,7 +310,8 @@
             methods:{
               send(e){
                 e.preventDefault();
-                if(this.name!=='' && this.email!=='' && this.msg!==''){
+		       if(this.name!=='' && this.email!=='' && this.msg!==''){
+
                 this.db.collection('msg').add({
                   name:this.name,
                   email:this.email,
@@ -319,8 +321,9 @@
                   this.email=''
                   this.msg=''
                 })
+
                 }
-              }
+
             }
   
         })
