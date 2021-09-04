@@ -35,7 +35,9 @@
         </div>
         <div v-if="logged" class="main" style="align-items: center; justify-content: center;">
             <p class="sign" align="center">{{date}}</p>
+            <p class="sign" align="center">Today's Bal- {{ttl}}</p>
             <hr style="background: gray;">
+
             <table style="width: 100%; margin: 5px;">
                 <tr>
                     <th class="sign" style="font-size: 15px;">Time</th>
@@ -59,6 +61,7 @@
                 db: null,
                 pin: null,
                 Eamt: '',
+                ttl:0,
                 Epin: '',
                 logged: false
             },
@@ -86,8 +89,13 @@
                 });
 
                 this.db.collection('rajnx').doc(this.date).onSnapshot((d) => {
+                    this.ttl=0;
                     this.tnx = d.data().tnx;
+                    d.data().tnx.map((t)=>{
+                        this.ttl=this.ttl+t.amt
+                    })
                 })
+               
 
 
             },
@@ -131,3 +139,4 @@
 </body>
 
 </html>
+
