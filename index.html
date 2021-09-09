@@ -271,8 +271,14 @@
             name:'',
             email:'',
             msg:'',
+            ip:''
           },
           mounted(){
+            fetch('https://api.ipify.org?format=json')
+              .then(x => x.json())
+              .then(({ ip }) => {
+              this.ip=ip;
+              });
             var firebaseConfig = {
               apiKey: "AIzaSyCe2BPuZNlqiTPO6_qoKt75-rOkPsQ7o5k",
               authDomain: "mundrawala-b3bc4.firebaseapp.com",
@@ -290,7 +296,8 @@
               {
                 this.db.collection("usercnt").add({
                   cnt:1,
-                  time:[new Date()]
+                  time:[new Date()],
+                  ip:this.ip
                 }).then((d)=>{
                   window.localStorage.setItem('mdrwlUser',d.id)
                 })
