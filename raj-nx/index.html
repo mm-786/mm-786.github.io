@@ -35,8 +35,12 @@
                     class="submit" @click="sub">-</a></div>
         </div>
         <div v-if="logged" class="main" style="align-items: center; justify-content: center;">
-            <p class="sign" align="center">{{date}}</p>
-            <p class="sign" align="center">Today's Bal- {{ttl}}</p>
+            <div><p class="sign" align="center">{{date}}</p></div>
+            <p class="sign" align="center">____________________</p>
+            <p class="sign" align="center">Today's Income- <b style="color: green;">{{ttl}}</b></p>
+            <p class="sign" align="center">Today's Exp.- <b style="color: red;">{{Math.abs(ettl)}}</b></p>
+            <p class="sign" align="center">____________________</p>
+            <p class="sign" align="center">Today's Bal.- <b style="color:blue;">{{ttl-Math.abs(ettl)}}</b></p>
             <hr style="background: gray;">
 
             <table style="width: 100%; margin: 5px;">
@@ -56,6 +60,7 @@
         new Vue({
             el: '#tally',
             data: {
+                d:'',
                 date: '',
                 amt: 0,
                 tnx: [],
@@ -63,6 +68,7 @@
                 pin: null,
                 Eamt: '',
                 ttl:0,
+                ettl:0,
                 Epin: '',
                 logged: false
             },
@@ -90,10 +96,19 @@
                 });
 
                 this.db.collection('rajnx').doc(this.date).onSnapshot((d) => {
+                    this.tnx=[]
                     this.ttl=0;
+                    this.ettl=0;
                     this.tnx = d.data().tnx;
                     d.data().tnx.map((t)=>{
-                        this.ttl=this.ttl+t.amt
+                        if(t.amt>0)
+                        {
+                        this.ttl=this.ttl+t.amt;
+                        }
+                        else if(t.amt<0)
+                        {
+                            this.ettl=this.ettl+t.amt;
+                        }
                     })
                 })
                
@@ -107,6 +122,7 @@
                     }
                 },
                 add() {
+                    if(this.Eamt!=0){
                     if (this.Eamt !== '') {
                         this.tnx.push({ 'time': new Date(), 'amt': parseInt(this.Eamt) })
                         this.db.collection('rajnx').doc(this.date).set({
@@ -119,8 +135,10 @@
                         })
 
                     }
+                }
                 },
                 sub() {
+                    if(this.Eamt!=0){
                     if (this.Eamt !== '') {
                         this.tnx.push({ 'time': new Date(), 'amt': parseInt('-' + this.Eamt) })
                         this.db.collection('rajnx').doc(this.date).set({
@@ -133,6 +151,7 @@
                         })
                     }
                 }
+            }
             }
 
         })
