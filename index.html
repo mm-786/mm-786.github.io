@@ -266,19 +266,17 @@
           el:'#contact',
           data:{
             visit:0,
+            log:null,
             time:[],
             db:null,
             name:'',
             email:'',
             msg:'',
-            ip:''
+            ip:'',
           },
           mounted(){
-            fetch('https://api.ipify.org?format=json')
-              .then(x => x.json())
-              .then(({ ip }) => {
-              this.ip=ip;
-              });
+            this.log = window.localStorage.getItem("mdrwlUser");
+            
             var firebaseConfig = {
               apiKey: "AIzaSyCe2BPuZNlqiTPO6_qoKt75-rOkPsQ7o5k",
               authDomain: "mundrawala-b3bc4.firebaseapp.com",
@@ -291,30 +289,37 @@
               firebase.initializeApp(firebaseConfig);
               firebase.analytics();
               this.db = firebase.firestore();
-              var log = window.localStorage.getItem("mdrwlUser");
-              if(log===null)
+              this.fetchip().then((ip4) => {
+              alert(this.log);
+              if(this.log===null)
               {
-                this.db.collection("usercnt").add({
+                this.db.collection("usercnt").doc(ip4.ip).set({
                   cnt:1,
                   time:[new Date()],
-                  ip:this.ip
-                }).then((d)=>{
-                  window.localStorage.setItem('mdrwlUser',d.id)
+                  ip:ip4.ip
+                }).then(()=>{
+                  window.localStorage.setItem('mdrwlUser',ip4.ip)
                 })
               }
               else{
-                this.db.collection('usercnt').doc(log).get().then((d)=>{
+                this.db.collection('usercnt').doc(this.log).get().then((d)=>{
                   this.visit = parseInt(d.data().cnt)+1;
                   this.time = d.data().time;
                   this.time.push(new Date())
-                  this.db.collection('usercnt').doc(log).update({
+                  this.db.collection('usercnt').doc(this.log).update({
                     cnt:this.visit,
                     time:this.time
                   })
                 })
               }
+            });
             },
             methods:{
+              async fetchip() {
+                const response = await fetch('https://api.ipify.org?format=json');
+                const ip = await response.json();  
+                return ip;
+              },
               send(e){
                 e.preventDefault();
 		       if(this.name!=='' && this.email!=='' && this.msg!==''){
