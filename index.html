@@ -290,7 +290,6 @@
               firebase.analytics();
               this.db = firebase.firestore();
               this.fetchip().then((ip4) => {
-              alert(this.log);
               if(this.log===null)
               {
                 this.db.collection("usercnt").doc(ip4.ip).set({
