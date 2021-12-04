@@ -19,8 +19,8 @@
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <!--        <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">-->
     <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
-<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
-<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/> -->
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/> -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -95,25 +95,26 @@
         </div>
     </header> <!-- End Header Section -->
 
-    <section id="slider" class="slider" >
+    <section id="slider" class="slider">
         <div class="slider_overlay">
             <div class="container">
                 <div class="row">
                     <div class="main_slider text-center">
                         <div class="col-md-12">
                             <div class="main_slider_content wow zoomIn" data-wow-duration="1s" id="banner">
-                                <h1 style="font-size: 50px;">Survive <span>{{day}}</span>, with our <span id="dish">{{dish}}</span>.</h1>
+                                <h1 style="font-size: 50px;">Survive <span>{{day}}</span>, with our <span
+                                        id="dish">{{dish}}</span>.</h1>
                                 <script>
                                     var app = new Vue({
                                         el: '#banner',
                                         data: {
-                                            day:'',
-                                            dish:'',
-                                            days:['Sunday','Monday','Tuesday','Wednesday', 'Thursday','Friday','Saturday'],
-                                            dishes:['Kurkure Chat','Vegitable Schezwan Meggie','Cheese Grill Bread','Mix Mayonise Bhel','Jalaram Special Sandwich','Panir Makhani Sandwich','Tomato Twist Pasta']
+                                            day: '',
+                                            dish: '',
+                                            days: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+                                            dishes: ['Kurkure Chat', 'Vegitable Schezwan Meggie', 'Cheese Grill Bread', 'Mix Mayonise Bhel', 'Jalaram Special Sandwich', 'Panir Makhani Sandwich', 'Tomato Twist Pasta']
                                         },
-                                        mounted(){
-                                            this.day=this.days[new Date().getDay()]
+                                        mounted() {
+                                            this.day = this.days[new Date().getDay()]
                                             this.dish = this.dishes[new Date().getDay()]
                                         }
 
@@ -279,23 +280,34 @@
                                 <div class="pakeg_title">
                                     <h4>Drinks & Namkeens</h4>
                                 </div>
-                                <ion-slides pager="true" :options="slideOpts" > 
-                                    <ion-slide >
-                                <ul style="width: 100%;" >
-                                    <li style="display: flex; justify-content: space-between;"><span>Tea</span><span>₹ 20/-</span></li>
-                                    <li style="display: flex; justify-content: space-between;"><span>Coffee</span><span>₹ 20/-</span></li>
-                                    <li style="display: flex; justify-content: space-between;"><span>Sp. Coffee</span><span>₹ 30/-</span></li>
-                                    <li style="display: flex; justify-content: space-between;"><span>Bornvita</span><span>₹ 50/-</span></li>
-                                    <li style="display: flex; justify-content: space-between;"><span>Oreo Shake</span><span>₹ 60/-</span></li>
-                                   
-                                </ul>
-                                </ion-slide>
-                                <ion-slide>
-                                    <ul style="width: 100%;">
-                                    <li style="display: flex; justify-content: space-between;"><span>Packed Cold Drinks</span><span>₹ MRP*/-</span></li>
-                                    <li style="display: flex; justify-content: space-between;"><span>Packed Cold Drinks</span><span>₹ MRP*/-</span></li>
-                                </ul>
-                                </ion-slide>
+                                <ion-slides pager="true" :options="slideOpts">
+                                    <ion-slide>
+                                        <ul style="width: 100%;">
+                                            <li style="display: flex; justify-content: space-between;">
+                                                <span>Tea</span><span>₹ 20/-</span>
+                                            </li>
+                                            <li style="display: flex; justify-content: space-between;">
+                                                <span>Coffee</span><span>₹ 20/-</span>
+                                            </li>
+                                            <li style="display: flex; justify-content: space-between;"><span>Sp.
+                                                    Coffee</span><span>₹ 30/-</span></li>
+                                            <li style="display: flex; justify-content: space-between;">
+                                                <span>Bornvita</span><span>₹ 50/-</span>
+                                            </li>
+                                        </ul>
+                                    </ion-slide>
+                                    <ion-slide>
+                                        <ul style="width: 100%;">
+                                            <li style="display: flex; justify-content: space-between;"><span>Oreo
+                                                    Shake</span><span>₹ 60/-</span></li>
+                                            <li style="display: flex; justify-content: space-between;"><span>Red
+                                                    Bull</span><span>₹ MRP*</span></li>
+                                            <li style="display: flex; justify-content: space-between;"><span>Cold
+                                                    Drinks</span><span>₹ MRP*</span></li>
+                                            <li style="display: flex; justify-content: space-between;"><span>Balaji
+                                                    Namkeens</span><span>₹ MRP*</span></li>
+                                        </ul>
+                                    </ion-slide>
                                 </ion-slides>
                             </div>
                         </div>
@@ -305,21 +317,40 @@
                         <div class="col-md-6 col-sm-8">
                             <div class="single_pakeg_text">
                                 <div class="pakeg_title">
-                                    <h4>Main course </h4>
+                                    <h4>Delicious Dishes </h4>
                                 </div>
 
-                                <ul>
-                                    <li style="display: flex; justify-content: space-between;"><span>Tuna Roast
-                                            Source</span><span>₹ 25/-</span></li>
-                                    <li style="display: flex; justify-content: space-between;"><span>Tuna Roast
-                                            Source</span><span>₹ 25/-</span></li>
-                                    <li style="display: flex; justify-content: space-between;"><span>Tuna Roast
-                                            Source</span><span>₹ 25/-</span></li>
-                                    <li style="display: flex; justify-content: space-between;"><span>Tuna Roast
-                                            Source</span><span>₹ 25/-</span></li>
-                                    <li style="display: flex; justify-content: space-between;"><span>Tuna Roast
-                                            Source</span><span>₹ 25/-</span></li>
-                                </ul>
+                                <ion-slides pager="true" :options="slideOpts">
+                                    <ion-slide>
+                                        <ul style="width: 100%;">
+                                            <li style="display: flex; justify-content: space-between;">
+                                                <span>Kurkure Chat</span><span>₹ 40/-</span>
+                                            </li>
+                                            <li style="display: flex; justify-content: space-between;">
+                                                <span>Mix Mayonise Bhel</span><span>₹ 40/-</span>
+                                            </li>
+                                            <li style="display: flex; justify-content: space-between;"><span>Allo Tiki
+                                                    Chat</span><span>₹ 50/-</span></li>
+                                            <li style="display: flex; justify-content: space-between;">
+                                                <span>Kurkure Chat Cheese</span><span>₹ 60/-</span>
+                                            </li>
+                                        </ul>
+                                    </ion-slide>
+                                    <ion-slide>
+                                        <ul style="width: 100%;">
+                                            <li style="display: flex; justify-content: space-between;"><span>Mix Mayonise Bhel</span><span>₹ 60/-</span></li>
+                                            <li style="display: flex; justify-content: space-between;"><span>French Fries</span><span>₹ 60/-</span></li>
+                                            <li style="display: flex; justify-content: space-between;"><span>Masala French Fries</span><span>₹ 70/-</span></li>
+                                            <li style="display: flex; justify-content: space-between;"><span>Tomato Twist Pasta</span><span>₹ 70/-</span></li>
+                                        </ul>
+                                    </ion-slide>
+                                    <ion-slide>
+                                        <ul style="width: 100%;">
+                                            <li style="display: flex; justify-content: space-between;"><span>Macroni Cheese Pasta</span><span>₹ 70/-</span></li>
+                                            <li style="display: flex; justify-content: space-between;"><span>Cheese Ball</span><span>₹ 100/-</span></li>
+                                        </ul>
+                                    </ion-slide>
+                                </ion-slides>
                             </div>
                         </div>
                     </div>
