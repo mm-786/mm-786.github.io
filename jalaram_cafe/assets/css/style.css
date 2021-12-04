@@ -826,27 +826,6 @@ font-size: 6rem;
   padding-bottom:120px;
 }
 
-.single_pakeg_one{
-	background:url(../images/newsone.jpg) left center no-repeat;
-	padding:30px;
-	overflow:hidden;
-	margin-top:60px;
-}
-.single_pakeg_two{
-	background:url(../images/newstwo.jpg) right center no-repeat;
-	padding:30px;	
-	overflow:hidden;
-	margin-top:60px;	
-	
-}
-.single_pakeg_three{
-	background:url(../images/newsthree.jpg) left center no-repeat;
-	padding:30px;	
-	overflow:hidden;
-	margin-top:60px;	
-	
-}
-
 .single_pakeg_text{
 	background:#fff;
 	padding:30px;
@@ -854,11 +833,20 @@ font-size: 6rem;
 }
 
 .single_pakeg_text ul li{
-    background: url(../images/pkli.png) no-repeat left center;
-    padding: 15px 0px 15px 60px;
+    padding: 15px 0px 15px 0px;
+    text-align:left;
     margin-top: 20px;
 	
 }
+
+
+.slider-pager-page {
+    color: yellow !important;
+  }
+  
+  .slider-pager-page.active {
+    color: brown !important;
+  }
 
 /* Mobail Apps Section css */
 
