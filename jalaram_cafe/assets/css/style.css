@@ -825,7 +825,12 @@ font-size: 6rem;
   overflow: hidden;	
   padding-bottom:120px;
 }
-
+body {
+    -webkit-user-select: none;
+       -moz-user-select: -moz-none;
+        -ms-user-select: none;
+            user-select: none;
+  }
 .single_pakeg_text{
 	background:#fff;
 	padding:30px;
