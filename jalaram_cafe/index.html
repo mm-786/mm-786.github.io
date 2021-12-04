@@ -2,128 +2,163 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>JALARAM CAFE</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
 
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-        <!--        <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>JALARAM CAFE</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <!--        <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">-->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/> -->
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
 
-        <!--For Plugins external css-->
-        <link rel="stylesheet" href="assets/css/animate/animate.css" />
-        <link rel="stylesheet" href="assets/css/plugins.css" />
+    <!--For Plugins external css-->
+    <link rel="stylesheet" href="assets/css/animate/animate.css" />
+    <link rel="stylesheet" href="assets/css/plugins.css" />
 
-        <!--Theme custom css -->
-        <link rel="stylesheet" href="assets/css/style.css">
+    <!--Theme custom css -->
+    <link rel="stylesheet" href="assets/css/style.css">
 
-        <!--Theme Responsive css-->
-        <link rel="stylesheet" href="assets/css/responsive.css" />
+    <!--Theme Responsive css-->
+    <link rel="stylesheet" href="assets/css/responsive.css" />
 
-        <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-    </head>
-    <body>
-        <!--[if lt IE 8]>
+    <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+</head>
+
+<body>
+
+    <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-		<div class='preloader'><div class='loaded'>&nbsp;</div></div>
-        <header id="home" class="navbar-fixed-top">
-            <div class="header_top_menu clearfix">	
-                <div class="container">
-                    <div class="row">	
-                        <div class="col-md-5 col-md-offset-3 col-sm-12 text-right">
-                            <div class="head_top_social text-right">
-                                <a><i class="fa fa-map-marker"></i> Bhuj-Kachchh 370001</a>
-                                </div>
-                        </div>
-
-                        <div class="col-md-4 col-sm-12">
-                            <div class="head_top_social text-right">
-                                <a href="tel:+919925074874"><i class="fa fa-phone"></i></a>
-                                <a href=""><i class="fa fa-facebook"></i></a>
-                                <a href=""><i class="fa fa-instagram"></i></a>
-                            </div>	
-                        </div>
-
-                    </div>			
-                </div>
-            </div>
-
-            <!-- End navbar-collapse-->
-
-            <div class="main_menu_bg">
-                <div class="container"> 
-                    <div class="row">
-                        <nav class="navbar navbar-default">
-                            <div class="container-fluid">
-                                <div class="navbar-header">
-                                    <a class="navbar-brand our_logo" href="#"><img src="assets/images/logo.png" alt="" /></a>
-                                </div>
-                                
-                            </div><!-- /.container-fluid -->
-                            <div>
-                                <p style="text-align: right; font-size: large; margin: 15px; font-weight: bold; font-family: 'Architects Daughter', cursive; color: bisque;">JALARAM CAFE</p>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-            </div>	
-        </header> <!-- End Header Section -->
-
-        <section id="slider" class="slider">
-            <div class="slider_overlay">
-                <div class="container">
-                    <div class="row">
-                        <div class="main_slider text-center">
-                            <div class="col-md-12">
-                                <div class="main_slider_content wow zoomIn" data-wow-duration="1s">
-                                    <h1>Foody Love</h1>
-                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi. </p>
-                                </div>
-                            </div>	
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="abouts" class="abouts">
+    <div class='preloader'>
+        <div class='loaded'>&nbsp;</div>
+    </div>
+    <header id="home" class="navbar-fixed-top">
+        <div class="header_top_menu clearfix">
             <div class="container">
                 <div class="row">
-                    <div class="abouts_content">
-                        <div class="col-md-6">
-                            <div class="single_abouts_text text-center wow slideInLeft" data-wow-duration="1s">
-                                <img src="assets/images/ab.png" alt="" />
+                    <div class="col-md-5 col-md-offset-3 col-sm-12 text-right">
+                        <div class="head_top_social text-right">
+                            <a><i class="fa fa-map-marker"></i> Bhuj-Kachchh 370001</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-12">
+                        <div class="head_top_social text-right">
+                            <a href="tel:+919925074874"><i class="fa fa-phone"></i></a>
+                            <a href="https://wa.me/+919925074874"><i class="fa fa-whatsapp"></i></a>
+                            <a href="https://www.facebook.com/Jalaramcafe/"><i class="fa fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/jalaramcafe/"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- End navbar-collapse-->
+
+        <div class="main_menu_bg">
+            <div class="container">
+                <div class="row">
+                    <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <a class="navbar-brand our_logo" href="#"><img src="assets/images/logo.png"
+                                        alt="" /></a>
+                            </div>
+
+                        </div><!-- /.container-fluid -->
+                        <div>
+                            <p
+                                style="text-align: right; font-size: large; margin: 15px; font-weight: bold; font-family: 'Architects Daughter', cursive; color: bisque;">
+                                JALARAM CAFE</p>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header> <!-- End Header Section -->
+
+    <section id="slider" class="slider" >
+        <div class="slider_overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="main_slider text-center">
+                        <div class="col-md-12">
+                            <div class="main_slider_content wow zoomIn" data-wow-duration="1s" id="banner">
+                                <h1>Survive <span>{{day}}</span>, with our <span id="dish">{{dish}}</span>.</h1>
+                                <script>
+                                    var app = new Vue({
+                                        el: '#banner',
+                                        data: {
+                                            day:'',
+                                            dish:'',
+                                            days:['Sunday','Monday','Tuesday','Wednesday', 'Thursday','Friday','Saturday'],
+                                            dishes:['Kurkure Chat','Vegitable Schezwan Meggie','Cheese Grill Bread','Mix Mayonise Bhel','Jalaram Special Sandwich','Panir Makhani Sandwich','Tomato Twist Pasta']
+                                        },
+                                        mounted(){
+                                            this.day=this.days[new Date().getDay()]
+                                            this.dish = this.dishes[new Date().getDay()]
+                                        }
+
+                                    })
+                                </script>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="col-md-6">
-                            <div class="single_abouts_text wow slideInRight" data-wow-duration="1s">
-                                <h4>About us</h4>
-                                <h3>WE ARE TASTY</h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's stan</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                                <p>dard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesettingdard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting</p>
+    <section id="abouts" class="abouts">
+        <div class="container">
+            <div class="row">
+                <div class="abouts_content">
+                    <div class="col-md-6">
+                        <div class="single_abouts_text text-center wow slideInLeft" data-wow-duration="1s">
+                            <img src="assets/images/ab.png" alt="" />
+                        </div>
+                    </div>
 
-                            </div>
+                    <div class="col-md-6">
+                        <div class="single_abouts_text wow slideInRight" data-wow-duration="1s">
+                            <h4>About us</h4>
+                            <h3>WE ARE TASTY</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has been the industry's stan</p>
+
+                            <p>dard dummy text ever since the 1500s,when an unknown printer took a galley of type and
+                                scrambled it to make a type specimen book. It has survived not only five centuries, but
+                                also the leap into electronic typesettingdard dummy text ever since the 1500s,when an
+                                unknown printer took a galley of type and scrambled it to make a type specimen book. It
+                                has survived not only five centuries, but also the leap into electronic typesetting</p>
+
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="features" class="features">
+    <!-- <section id="features" class="features">
             <div class="slider_overlay">
                 <div class="container">
                     <div class="row">
@@ -145,223 +180,295 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
-        <section id="portfolio" class="portfolio">
-            <div class="container">
-                <div class="row">
-                    <div class="portfolio_content text-center  wow fadeIn" data-wow-duration="5s">
-                        <div class="col-md-12">
-                            <div class="head_title text-center">
-                                <h4>Delightful</h4>
-                                <h3>Experience</h3>
-                            </div>
-
-                            <div class="main_portfolio_content">
-                                <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
-                                    <img src="assets/images/p1.png" alt="" />
-                                    <div class="portfolio_images_overlay text-center">
-                                        <h6>Italian Source Mushroom</h6>
-                                        <p class="product_price">$12</p>
-                                        
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
-                                    <img src="assets/images/p2.png" alt="" />
-                                    <div class="portfolio_images_overlay text-center">
-                                        <h6>Italian Source Mushroom</h6>
-                                        <p class="product_price">$12</p>
-                                        
-                                    </div>								
-                                </div>
-                                <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
-                                    <img src="assets/images/p3.png" alt="" />
-                                    <div class="portfolio_images_overlay text-center">
-                                        <h6>Italian Source Mushroom</h6>
-                                        <p class="product_price">$12</p>
-                                        
-                                    </div>								
-                                </div>
-                                <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
-                                    <img src="assets/images/p4.png" alt="" />
-                                    <div class="portfolio_images_overlay text-center">
-                                        <h6>Italian Source Mushroom</h6>
-                                        <p class="product_price">$12</p>
-                                        
-                                    </div>								
-                                </div>
-                                <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
-                                    <img src="assets/images/p5.png" alt="" />
-                                    <div class="portfolio_images_overlay text-center">
-                                        <h6>Italian Source Mushroom</h6>
-                                        <p class="product_price">$12</p>
-                                        
-                                    </div>								
-                                </div>
-                                <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
-                                    <img src="assets/images/p6.png" alt="" />
-                                    <div class="portfolio_images_overlay text-center">
-                                        <h6>Italian Source Mushroom</h6>
-                                        <p class="product_price">$12</p>
-                                        
-                                    </div>								
-                                </div>
-                                <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
-                                    <img src="assets/images/p7.png" alt="" />
-                                    <div class="portfolio_images_overlay text-center">
-                                        <h6>Italian Source Mushroom</h6>
-                                        <p class="product_price">$12</p>
-                                        
-                                    </div>								
-                                </div>
-                                <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
-                                    <img src="assets/images/p8.png" alt="" />
-                                    <div class="portfolio_images_overlay text-center">
-                                        <h6>Italian Source Mushroom</h6>
-                                        <p class="product_price">$12</p>
-                                        
-                                    </div>								
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="ourPakeg" class="ourPakeg">
-            <div class="container">
-                <div class="main_pakeg_content">
-                    <div class="row">
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="portfolio_content text-center  wow fadeIn" data-wow-duration="5s">
+                    <div class="col-md-12">
                         <div class="head_title text-center">
-                            <h4>Amazing</h4>
-                            <h3>Delicious</h3>
+                            <h4>Delightful</h4>
+                            <h3>Experience</h3>
                         </div>
 
-                        <div class="single_pakeg_one text-right wow rotateInDownRight">
-                            <div class="col-md-6 col-md-offset-6 col-sm-8 col-sm-offset-4">
-                                <div class="single_pakeg_text">
-                                    <div class="pakeg_title">
-                                        <h4>Drinks</h4>
-                                    </div>
+                        <div class="main_portfolio_content">
+                            <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
+                                <img src="assets/images/p1.png" alt="" />
+                                <div class="portfolio_images_overlay text-center">
+                                    <h6>Italian Source Mushroom</h6>
+                                    <p class="product_price">$12</p>
 
-                                    <ul>
-                                        <li style="display: flex; justify-content: space-between;"><span>Tuna Roast Source</span><span>₹ 25/-</span></li>
-                                       <li style="display: flex; justify-content: space-between;"><span>Tuna Roast Source</span><span>₹ 25/-</span></li>
-                                       <li style="display: flex; justify-content: space-between;"><span>Tuna Roast Source</span><span>₹ 25/-</span></li>
-                                       <li style="display: flex; justify-content: space-between;"><span>Tuna Roast Source</span><span>₹ 25/-</span></li>
-                                       <li style="display: flex; justify-content: space-between;"><span>Tuna Roast Source</span><span>₹ 25/-</span></li>
-                                    </ul>
                                 </div>
                             </div>
-                        </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
+                                <img src="assets/images/p2.png" alt="" />
+                                <div class="portfolio_images_overlay text-center">
+                                    <h6>Italian Source Mushroom</h6>
+                                    <p class="product_price">$12</p>
 
-                        <div class="single_pakeg_two text-left wow rotateInDownLeft">
-                            <div class="col-md-6 col-sm-8">
-                                <div class="single_pakeg_text">
-                                    <div class="pakeg_title">
-                                        <h4>Main course </h4>
-                                    </div>
-
-                                    <ul>
-                                       <li style="display: flex; justify-content: space-between;"><span>Tuna Roast Source</span><span>₹ 25/-</span></li>
-                                       <li style="display: flex; justify-content: space-between;"><span>Tuna Roast Source</span><span>₹ 25/-</span></li>
-                                       <li style="display: flex; justify-content: space-between;"><span>Tuna Roast Source</span><span>₹ 25/-</span></li>
-                                       <li style="display: flex; justify-content: space-between;"><span>Tuna Roast Source</span><span>₹ 25/-</span></li>
-                                       <li style="display: flex; justify-content: space-between;"><span>Tuna Roast Source</span><span>₹ 25/-</span></li>
-                                    </ul>
                                 </div>
                             </div>
-                        </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
+                                <img src="assets/images/p3.png" alt="" />
+                                <div class="portfolio_images_overlay text-center">
+                                    <h6>Italian Source Mushroom</h6>
+                                    <p class="product_price">$12</p>
 
-                        <div class="single_pakeg_three text-left wow rotateInDownRight">
-                            <div class="col-md-6 col-md-offset-6 col-sm-8 col-sm-offset-4">
-                                <div class="single_pakeg_text">
-                                    <div class="pakeg_title">
-                                        <h4>Desserts</h4>
-                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
+                                <img src="assets/images/p4.png" alt="" />
+                                <div class="portfolio_images_overlay text-center">
+                                    <h6>Italian Source Mushroom</h6>
+                                    <p class="product_price">$12</p>
 
-                                    <ul>
-                                       <li style="display: flex; justify-content: space-between;"><span>Tuna Roast Source</span><span>₹ 25/-</span></li>
-                                       <li style="display: flex; justify-content: space-between;"><span>Tuna Roast Source</span><span>₹ 25/-</span></li>
-                                       <li style="display: flex; justify-content: space-between;"><span>Tuna Roast Source</span><span>₹ 25/-</span></li>
-                                       <li style="display: flex; justify-content: space-between;"><span>Tuna Roast Source</span><span>₹ 25/-</span></li>
-                                       <li style="display: flex; justify-content: space-between;"><span>Tuna Roast Source</span><span>₹ 25/-</span></li>
-                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
+                                <img src="assets/images/p5.png" alt="" />
+                                <div class="portfolio_images_overlay text-center">
+                                    <h6>Italian Source Mushroom</h6>
+                                    <p class="product_price">$12</p>
+
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
+                                <img src="assets/images/p6.png" alt="" />
+                                <div class="portfolio_images_overlay text-center">
+                                    <h6>Italian Source Mushroom</h6>
+                                    <p class="product_price">$12</p>
+
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
+                                <img src="assets/images/p7.png" alt="" />
+                                <div class="portfolio_images_overlay text-center">
+                                    <h6>Italian Source Mushroom</h6>
+                                    <p class="product_price">$12</p>
+
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
+                                <img src="assets/images/p8.png" alt="" />
+                                <div class="portfolio_images_overlay text-center">
+                                    <h6>Italian Source Mushroom</h6>
+                                    <p class="product_price">$12</p>
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="footer_widget" class="footer_widget">
-            <div class="container">
+    <section id="ourPakeg" class="ourPakeg">
+        <div class="container">
+            <div class="main_pakeg_content">
                 <div class="row">
-                    <div class="footer_widget_content text-center">
-                        <div class="col-md-6">
-                            <div class="single_widget wow fadeIn" data-wow-duration="2s">
-                                <h3>Take it easy with location</h3>
+                    <div class="head_title text-center">
+                        <h4>Amazing</h4>
+                        <h3>Delicious</h3>
+                    </div>
 
-                                <div class="single_widget_info">
-                                    <p>Bhuj-Mundra Road,
+                    <div class="single_pakeg_one text-right wow rotateInDownRight">
+                        <div class="col-md-6 col-md-offset-6 col-sm-8 col-sm-offset-4">
+                            <div class="single_pakeg_text">
+                                <div class="pakeg_title">
+                                    <h4>Drinks & Namkeens</h4>
+                                </div>
+                                <ion-slides pager="true" :options="slideOpts" > 
+                                    <ion-slide >
+                                <ul style="width: 100%;" >
+                                    <li style="display: flex; justify-content: space-between;"><span>Tea</span><span>₹ 20/-</span></li>
+                                    <li style="display: flex; justify-content: space-between;"><span>Coffee</span><span>₹ 20/-</span></li>
+                                    <li style="display: flex; justify-content: space-between;"><span>Sp. Coffee</span><span>₹ 30/-</span></li>
+                                    <li style="display: flex; justify-content: space-between;"><span>Bornvita</span><span>₹ 50/-</span></li>
+                                    <li style="display: flex; justify-content: space-between;"><span>Oreo Shake</span><span>₹ 60/-</span></li>
+                                   
+                                </ul>
+                                </ion-slide>
+                                <ion-slide>
+                                    <ul style="width: 100%;">
+                                    <li style="display: flex; justify-content: space-between;"><span>Packed Cold Drinks</span><span>₹ MRP*/-</span></li>
+                                    <li style="display: flex; justify-content: space-between;"><span>Packed Cold Drinks</span><span>₹ MRP*/-</span></li>
+                                </ul>
+                                </ion-slide>
+                                </ion-slides>
+                            </div>
+                        </div>
+                    </div>
 
-                                        <span>Near Kachchh University,</span>
-                                        <span>Bhuj-Kachchh 370001</span>
-                                        <span class="phone_email">Mobile: <a style="color: white;" href="tel:+919925074874">+91 99250 74874</a></span>
-                                        UPI-<a href="upi://pay?pa=mundrawala@uboi&pn=JALARAM CAFE&cu=INR"> <img src="assets/images/upi-icon.svg" width="40" height="40"/></a>
-                                    </p>
+                    <div class="single_pakeg_two text-left wow rotateInDownLeft">
+                        <div class="col-md-6 col-sm-8">
+                            <div class="single_pakeg_text">
+                                <div class="pakeg_title">
+                                    <h4>Main course </h4>
                                 </div>
 
+                                <ul>
+                                    <li style="display: flex; justify-content: space-between;"><span>Tuna Roast
+                                            Source</span><span>₹ 25/-</span></li>
+                                    <li style="display: flex; justify-content: space-between;"><span>Tuna Roast
+                                            Source</span><span>₹ 25/-</span></li>
+                                    <li style="display: flex; justify-content: space-between;"><span>Tuna Roast
+                                            Source</span><span>₹ 25/-</span></li>
+                                    <li style="display: flex; justify-content: space-between;"><span>Tuna Roast
+                                            Source</span><span>₹ 25/-</span></li>
+                                    <li style="display: flex; justify-content: space-between;"><span>Tuna Roast
+                                            Source</span><span>₹ 25/-</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="single_pakeg_three text-left wow rotateInDownRight">
+                        <div class="col-md-6 col-md-offset-6 col-sm-8 col-sm-offset-4">
+                            <div class="single_pakeg_text">
+                                <div class="pakeg_title">
+                                    <h4>Desserts</h4>
+                                </div>
+
+                                <ul>
+                                    <li style="display: flex; justify-content: space-between;"><span>Tuna Roast
+                                            Source</span><span>₹ 25/-</span></li>
+                                    <li style="display: flex; justify-content: space-between;"><span>Tuna Roast
+                                            Source</span><span>₹ 25/-</span></li>
+                                    <li style="display: flex; justify-content: space-between;"><span>Tuna Roast
+                                            Source</span><span>₹ 25/-</span></li>
+                                    <li style="display: flex; justify-content: space-between;"><span>Tuna Roast
+                                            Source</span><span>₹ 25/-</span></li>
+                                    <li style="display: flex; justify-content: space-between;"><span>Tuna Roast
+                                            Source</span><span>₹ 25/-</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="single_pakeg_two text-left wow rotateInDownLeft">
+                        <div class="col-md-6 col-sm-8">
+                            <div class="single_pakeg_text">
+                                <div class="pakeg_title">
+                                    <h4>Main course </h4>
+                                </div>
+
+                                <ul>
+                                    <li style="display: flex; justify-content: space-between;"><span>Tuna Roast
+                                            Source</span><span>₹ 25/-</span></li>
+                                    <li style="display: flex; justify-content: space-between;"><span>Tuna Roast
+                                            Source</span><span>₹ 25/-</span></li>
+                                    <li style="display: flex; justify-content: space-between;"><span>Tuna Roast
+                                            Source</span><span>₹ 25/-</span></li>
+                                    <li style="display: flex; justify-content: space-between;"><span>Tuna Roast
+                                            Source</span><span>₹ 25/-</span></li>
+                                    <li style="display: flex; justify-content: space-between;"><span>Tuna Roast
+                                            Source</span><span>₹ 25/-</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="footer_widget" class="footer_widget">
+        <div class="container">
+            <div class="row">
+                <div class="footer_widget_content text-center">
+                    <div class="col-md-3">
+                        <div class="single_widget wow fadeIn" data-wow-duration="4s">
+                            <h3>Take it easy with location</h3>
+
+                            <div class="single_widget_info">
+                                <p>Bhuj-Mundra Road,
+
+                                    <span>Near Kachchh University,</span>
+                                    <span>Bhuj-Kachchh 370001</span>
+                                    <span class="phone_email">Mobile: <a style="color: white;"
+                                            href="tel:+919925074874">+91 99250 74874</a></span>
+                                </p>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+
+                        <div class="single_widget wow fadeIn" data-wow-duration="4s">
+                            <h3>Available For You</h3>
+                            <div class="single_widget_info">
+                                <p><span class="date_day">Monday To Sunday</span>
+                                    <span>Morning <b>10</b> O'Clock <br><br>TO<br></br> Midnight <b>12</b>
+                                        O'Clock</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+
+                        <div class="single_widget wow fadeIn" data-wow-duration="4s">
+                            <h3>Social Existance</h3>
+                            <div class="single_widget_info">
                                 <div class="footer_socail_icon">
-                                    <a href=""><i class="fa fa-facebook"></i></a>
-                                    <a href=""><i class="fa fa-instagram"></i></a>
+                                    <a href="https://wa.me/+919925074874"><i class="fa fa-whatsapp"></i></a>
+                                    <a href="https://www.facebook.com/Jalaramcafe/"><i class="fa fa-facebook"></i></a>
+                                    <a href="https://www.instagram.com/jalaramcafe/"><i class="fa fa-instagram"></i></a>
                                 </div>
+
                             </div>
                         </div>
+                    </div>
+                    <div class="col-md-3">
 
-                        <div class="col-md-6">
-                            <div class="single_widget wow fadeIn" data-wow-duration="4s">
+                        <div class="single_widget wow fadeIn" data-wow-duration="4s">
+                            <h3>Pay Your Bill</h3>
+                            <div class="single_widget_info">
 
-                                <div class="single_widget_info">
-                                    <p><span class="date_day">Monday To Sunday</span>
-                                        <span>Morning <b>10</b> O'Clock <br><br>TO<br></br> Midnight <b>12</b> O'Clock</span>
-                                        </p>
-                                </div>
+                                <a href="upi://pay?pa=9925074874@okbizaxis&pn=JALARAM CAFE&cu=INR"><img
+                                        src="assets/images/GPay.svg" /></a>
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
 
 
-        <!--Footer-->
-        <footer id="footer" class="footer">
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="copyright wow zoomIn" data-wow-duration="3s">
-							<p>Made with <i class="fa fa-heart"></i> by <a href="https://www.mundrawala.ml/"><img src="assets/images/dev.svg" width="21" height="15"/></a>2021. All Rights Reserved</p>
-						</div>
+    <!--Footer-->
+    <footer id="footer" class="footer">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="copyright wow zoomIn" data-wow-duration="3s">
+                        <p>Made with <i class="fa fa-heart"></i> by <a href="https://www.mundrawala.ml/"><img
+                                    src="assets/images/dev.svg" width="21" height="15" /></a>2021. All Rights Reserved
+                        </p>
                     </div>
                 </div>
             </div>
-        </footer>
-		
-		<div class="scrollup">
-			<a href="#"><i class="fa fa-chevron-up"></i></a>
-		</div>		
+        </div>
+    </footer>
+
+    <div class="scrollup">
+        <a href="#"><i class="fa fa-chevron-up"></i></a>
+    </div>
 
 
-        <script src="assets/js/vendor/jquery-1.11.2.min.js"></script>
-        <script src="assets/js/vendor/bootstrap.min.js"></script>
+    <script src="assets/js/vendor/jquery-1.11.2.min.js"></script>
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
 
-        <script src="assets/js/jquery-easing/jquery.easing.1.3.js"></script>
-        <script src="assets/js/wow/wow.min.js"></script>
-        <script src="assets/js/plugins.js"></script>
-        <script src="assets/js/main.js"></script>
-    </body>
+    <script src="assets/js/jquery-easing/jquery.easing.1.3.js"></script>
+    <script src="assets/js/wow/wow.min.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
 </html>
