@@ -5,20 +5,40 @@
     <title>Home2Decor</title>
 </head>
 <style>
-    body{
+    @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Cairo:wght@200&family=Nunito:wght@200&family=Varela+Round&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+    /* font-family: 'Alfa Slab One', cursive;
+
+    font-family: 'Cairo', sans-serif;
+
+    font-family: 'Nunito', sans-serif;
+
+    font-family: 'Varela Round', sans-serif; */
+
+    body {
         background-color: white;
     }
-    .bg-white{
-        background-color: rgba(250, 235, 215,0.5)
+
+    label {
+        font-weight: bold;
     }
+
+    .bg-white {
+        background-color: rgba(250, 235, 215, 0.5)
+    }
+
     nav {
-        background-color: rgba(250, 235, 215,0.5);
+        background-color: rgba(250, 235, 215, 0.5);
         display: flex;
         justify-content: space-between;
     }
 
     section {
         height: 550px;
+    }
+
+    .f-ubuntu{
+        font-family: 'Ubuntu', sans-serif;
     }
 
     .half-div {
@@ -53,7 +73,7 @@
         text-align: left;
     }
 
-    .heading{
+    .heading {
         font-size: 50px;
     }
 
@@ -88,19 +108,29 @@
     }
 
     .logo {
-        font-size: 31px;
-        color:rgb(39, 93, 101);
+        font-size: 28px;
+        color: rgb(39, 93, 101);
+        /* font-family: 'Alfa Slab One', cursive; */
+
+        /* font-family: 'Cairo', sans-serif; */
+
+        /* font-family: 'Nunito', sans-serif; */
+
+        font-family: 'Varela Round', sans-serif;
     }
 
     .tag-line {
+        margin-top: 5px;
         font-size: 12px;
-        color:rgb(252, 183, 72);
+        font-family: 'Nunito', sans-serif;
+        color: rgb(252, 183, 72);
         font-weight: bold;
     }
 
-    .nav-link{
+    .nav-link {
         margin-top: 15px;
     }
+
     .nav-link>a {
         padding: 10px;
         margin-top: 10px;
@@ -127,6 +157,14 @@
         margin: 50px 75px;
     }
 
+    .db-color{
+        color: rgb(39, 93, 101);
+    }
+
+    .gr-color{
+        color: gray;
+    }
+
     .f28 {
         font-size: 30px;
     }
@@ -138,18 +176,22 @@
     tr {
         height: 30px;
     }
+
     td {
         padding: 10px;
     }
+
     th {
         background-color: rgb(39, 93, 101);
         color: white;
         padding: 10px;
     }
-    .odd{
+
+    .odd {
         background-color: rgb(166, 166, 166);
     }
-    .even{
+
+    .even {
         background-color: rgb(221, 221, 221);
     }
 </style>
@@ -179,7 +221,7 @@
             </div>
             <div class="p50 center pd25">
                 <span class="heading-one">WHO WE ARE</span>
-                <p class="justy f28">Home is where the heart is ! We help
+                <p class="justy f28 f-ubuntu">Home is where the heart is ! We help
                     you create the ideal design for your
                     home, effortlessly and affordably.
                     We are an interior design
@@ -195,12 +237,12 @@
     <section>
         <div class="half-div">
 
-            <div class="p65 center pd35">
+            <div class="p65 center pd35 f-ubuntu">
                 <div class="left">
                     <span class="heading-two">HOME 2 DECOR</span>
                 </div>
                 <br>
-                <p class="justy f25 p25" style="margin-left: 150px; margin-right: 100px;">OUR SIMPLE AND COLLABORATIVE
+                <p class="justy f25 p25 gr-color" style="margin-left: 150px; margin-right: 100px;">OUR SIMPLE AND COLLABORATIVE
                     ONLINE PLATFORM, ALLOWS YOU
                     TO KEEP IN TOUCH WITH YOUR
                     DESIGNER THROUGHOUT THE
@@ -211,10 +253,10 @@
                     ARE!</p>
             </div>
             <div class="p35">
-                <div style="background-image: url(image/4.jpg); width: 100%; height:250px;  background-repeat: no-repeat;
+                <div style="background-image: url(image/4.jpg); width: 100%; height:275px;  background-repeat: no-repeat;
                 background-size: cover;">
                 </div>
-                <div style="background-image: url(image/2.jpg); width: 100%; height:250px;  background-repeat: no-repeat;
+                <div style="background-image: url(image/2.jpg); width: 100%; height:275px;  background-repeat: no-repeat;
                 background-size: cover">
                 </div>
             </div>
@@ -227,13 +269,13 @@
                 <div class="m-lr-200">
                     <h1>Experts in
                         Interior Designs</h1>
-                    <p>Offering customised
+                    <p class="gr-color f-ubuntu">Offering customised
                         design solutions from
                         the comfort of your
                         home.</p>
                     <h1>A Hassel Free
                         Experience</h1>
-                    <p>A collaborative effort
+                    <p class="gr-color f-ubuntu">A collaborative effort
                         made easy as you
                         communicate directly
                         with your designer
@@ -241,15 +283,15 @@
                         process .</p>
                     <h1>Your One Stop
                         Shop</h1>
-                    <p>Because everyone
+                    <p class="gr-color f-ubuntu">Because everyone
                         deserves a beautiful
                         home that is unique
                         yet affordable.</p>
                 </div>
             </div>
             <div class="p50">
-                <div class="p50">
-                    <div style="background-image: url(image/4.jpg); background-repeat: no-repeat; 
+                <div>
+                    <div style="background-image: url(image/3.jpg); background-repeat: no-repeat; 
                     background-size: cover; width: 100%; height:550px;">
                     </div>
                 </div>
@@ -257,10 +299,10 @@
         </div>
     </section>
     <section>
-        <div class="half-div">
+        <div class="half-div f-ubuntu">
 
             <div class="p50 center">
-                <h1 class="heading-3">CLASSIC</h1>
+                <h1 class="heading-3 db-color">CLASSIC</h1>
                 <p class="justy f28">Turn your vision into reality and
                     create a space as unique as you
                     while staying on a budget. This
@@ -270,7 +312,7 @@
             </div>
 
             <div class="p50 center">
-                <h1 class="heading-3">PREMIUM</h1>
+                <h1 class="heading-3 db-color">PREMIUM</h1>
                 <p class="justy f28">If Classic doesn’t cut it, why not go
                     Premium? Unlock unlimited revisions
                     and take your interiors to the next
@@ -282,10 +324,10 @@
         </div>
     </section>
     <section class="bg-white">
-        <div class="half-div">
+        <div class="half-div f-ubuntu">
 
             <div class="p50 center">
-                <h1 class="heading-3">LUXE</h1>
+                <h1 class="heading-3 db-color">LUXE</h1>
                 <p class="justy f28">Experience the best we have to
                     offer with this exceptional
                     package. Whether you are
@@ -297,7 +339,7 @@
                     of.</p>
             </div>
             <div class="p50 center">
-                <h1 class="heading-3">HOME & OFFICE</h1>
+                <h1 class="heading-3 db-color">HOME & OFFICE</h1>
                 <p class="justy f28">Get a personalised home office
                     designed to enhance your work-
                     from-home experience. Create a
@@ -309,8 +351,8 @@
     <section>
         <div class="half-div" style="justify-content: space-around;">
 
-            <div class="p100" style="margin-left: 50px; margin-right: 50px;">
-                <h1 class="heading-3">PACKAGES OUR RANGE OF PACKAGES HAVE BEEN CREATED
+            <div class="p100 f-ubuntu" style="margin-left: 50px; margin-right: 50px;">
+                <h1 class="heading-3 gr-color">PACKAGES OUR RANGE OF PACKAGES HAVE BEEN CREATED
                     FOR YOUR CONVENIENCE.</h1>
 
                 <table style="width: 100%; text-align: center; font-size: large;">
@@ -359,14 +401,19 @@
     <section class="bg-white">
         <div class="half-div">
 
-            <div class="p100">
+            <div class="p100" style="color: rgba(163, 126, 77,0.5);">
                 <span class="heading">DESIGNING YOUR HOME HAS NEVER
                     BEEN EASIER!</span><br>
                 <span class="heading-3">OUR COST-EFFECTIVE INTERIOR DESIGN PROCESS IS SIMPLE, CUSTOMISABLE AND
                     PROMISES BEAUTIFUL RESULTS.</span>
+                <br><br>
+                <div style="display: flex; justify-content: space-around;">
 
-                <!-- video -->
-
+                    <video width="650" controls>
+                        <source src="video/main.mp4" type="video/mp4">
+                        Your browser does not support HTML video.
+                    </video>
+                </div>
             </div>
         </div>
     </section>
@@ -374,20 +421,20 @@
     <section>
         <div class="half-div">
 
-            <div class="p100 center" style="padding-top: 70px;">
+            <div class="p100 center" style="padding-top: 100px;">
                 <img src="image/tab.png" />
             </div>
         </div>
     </section>
 
     <section class="bg-white">
-        <div class="half-div" style="justify-content: space-around;" >
+        <div class="half-div" style="justify-content: space-around;">
 
             <div class="p100 center" style="margin-left:15%;">
                 <div class="half-div" style="margin: 30px;">
                     <img src="image/tp1.png" width="130" />
                     <div
-                        style="background-color: rgb(39, 93, 101); width: 50%; height: 120px; margin-left: 90px; color: black;">
+                        style="background-color: rgb(39, 93, 101); font-family: 'Cairo', sans-serif; width: 50%; height: 120px; margin-left: 90px; color: black;">
                         <div class="square">
 
                         </div>
@@ -401,7 +448,7 @@
                 <div class="half-div" style="margin: 30px;">
                     <img src="image/tp2.png" width="130" />
                     <div
-                        style="background-color: rgb(39, 93, 101); width: 50%; height: 120px; margin-left: 90px; color: black;">
+                        style="background-color: rgb(39, 93, 101); font-family: 'Cairo', sans-serif; width: 50%; height: 120px; margin-left: 90px; color: black;">
                         <div class="square">
 
                         </div>
@@ -415,7 +462,7 @@
                 <div class="half-div" style="margin: 30px;">
                     <img src="image/tp3.png" width="130" />
                     <div
-                        style="background-color: rgb(39, 93, 101); width: 50%; height: 120px; margin-left: 90px; color: black;">
+                        style="background-color: rgb(39, 93, 101); font-family: 'Cairo', sans-serif; width: 50%; height: 120px; margin-left: 90px; color: black;">
                         <div class="square">
 
                         </div>
@@ -428,12 +475,13 @@
             </div>
         </div>
         <div style="text-align: center; font-size: large;">
-        <span >What are you waiting for ? <a><b>Start a project now !</b></a></span></div>
+            <span>What are you waiting for ? <a><b>Start a project now !</b></a></span>
+        </div>
     </section>
 
     <section>
         <div class="half-div" style="margin-top: 100px; color: white; background-image: url(image/1.jpg); background-repeat: no-repeat; 
-        background-size: cover;">
+        background-size: 100%">
 
             <div class="p100">
                 <h1>ARE YOU PLANING TO RENOVATE YOUR HOME?</h1>
